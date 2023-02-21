@@ -3,3 +3,4 @@
 
 export {default as NavBar} from "./Header/NavBar.jsx"
 export {default as MovingPhones} from "./MovingPhones.jsx"
+export {default as HeroSection} from "./HeroSection.jsx"
