@@ -8,7 +8,7 @@ import Navlinks from "./Navlinks";
 
 const NavBar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [isSidebarOpen, setSideBarOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   return (
     // giving it a height of h-28 to keep the size fixed
@@ -22,27 +22,10 @@ const NavBar = () => {
             </div>
           </Link>
         
-        <Navlinks  />
+        <Navlinks setVisible={setVisible} visible={visible}  />
       </div>
-
-      {/* <Sidebar visibility={isSidebarOpen == true ? "block" : "hidden"}>
-        <div class="relative h-32 w-32 ">
-          <div
-            onClick={() => {
-              isSidebarOpen == true ? setSideBarOpen(false) : setSideBarOpen(true);
-            }}
-            class="flex left-0 top-0 h-16 w-16 rounded-full bg-green-500"
-          >
-            01
-          </div>
-        </div>
-      </Sidebar> */}
-
-      {/*
-<button className='bg-gradient-to-r from-violet-800 to-sky-500 h-[46px] w-[156px] text-[#fff] rounded-[44px] gap-2 right-0 mt-4 ml-6 hover:shadow-xl hover:bg-gradient-to-r hover:from-violet-900 hover:to-sky-600'>
-                                    <span>Request A Quote</span>
-                                </button>
-                                */}
+      <Sidebar visible={visible} setVisible={setVisible} />
+      
     </nav>
   );
 };

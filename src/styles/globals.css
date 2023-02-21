@@ -9,7 +9,7 @@
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 6px;
   /*background-image: -webkit-linear-gradient(45deg,#ffbd84,#ff1f8e);*/
    /* background-image: -o-linear-gradient(45deg,#ffbd84,#ff1f8e);*/
     /* background-image: linear-gradient(45deg,#ffbd84,#ff1f8e);*/
