@@ -7,25 +7,25 @@ import Sidebar from "./Sidebar";
 import Navlinks from "./Navlinks";
 
 const NavBar = () => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [activeNav, setActiveNav] = useState(false);
   const [visible, setVisible] = useState(false);
 
   return (
     // giving it a height of h-28 to keep the size fixed
-    <nav className="bg-white w-full fixed h-20">
-      <div className="w-full flex h-full md:px-0 px-4  items-center justify-between ">
+    <nav className={`bg-white flex w-full fixed   h-20`}>
+      <div className="w-full flex max-h-20 h-full md:px-0 px-4 items-start  md:items-center justify-between ">
         {/* object contain scales down the image so its all seen , object center centers it */}
-          <Link className="flex-grow" href={"/"}  legacyBehavior>
-            <div className="flex relative w-40  h-full  items-center">
+        <Link className="flex-grow" href={"/"} legacyBehavior>
+          <div className="flex relative w-40  h-full  items-center">
             <Image fill className="object-contain object-center" alt="myServX Logo" src={Logo} />
+          </div>
+        </Link>
 
-            </div>
-          </Link>
-        
-        <Navlinks setVisible={setVisible} visible={visible}  />
+        <Navlinks setActiveNav={setActiveNav} activeNav={activeNav} setVisible={setVisible} visible={visible} />
       </div>
-      <Sidebar visible={visible} setVisible={setVisible} />
-      
+      {/* the phone nav */}
+      {/* the form */}
+      <Sidebar activeNav={activeNav} setActiveNav={setActiveNav} visible={visible} setVisible={setVisible} />
     </nav>
   );
 };

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BiMenuAltRight } from "react-icons/bi";
 import { useState } from "react";
 import {BsFillTelephoneFill} from "react-icons/bs"
-const Navlinks = ({visible,setVisible}) => {
+const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
   const links = [
     { title: "about", slug: "/about" },
     { title: "contact", slug: "/contact" },
@@ -27,10 +27,10 @@ const Navlinks = ({visible,setVisible}) => {
         </ul>
         <div className="flex items-center justify-end w-full md:w-fit gap-x-8 md:gap-x-0">
           
-        <button type="button" className="block md:hidden">
+          <button onClick={()=>{setActiveNav(!activeNav); setVisible(false)}} type="button" className="block md:hidden">
             <BiMenuAltRight className="text-4xl  text-slate-800" />
           </button>
-          <button onClick={()=>setVisible(!visible)} type="button" className="grid place-items-center md:w-40 w-12 h-12 rounded-full relative overflow-hidden transition-all group font-bold text-sm duration-500 ease-in-out   text-white uppercase bg-gradient-to-r from-purple-400  to-sky-400">
+          <button onClick={()=>setVisible(!visible)} type="button" className="md:grid hidden place-items-center md:w-40 w-12 h-12 rounded-full relative overflow-hidden transition-all group font-bold text-sm duration-500 ease-in-out   text-white uppercase bg-gradient-to-r from-purple-400  to-sky-400">
             <div className="w-12 h-12 group-hover:scale-[1.75] transition-all duration-500 ease-in-out rounded-full bg-purple-200 md:bg-purple-600 md:bg-opacity-20 bg-opacity-20 absolute -right-6 -top-6 "></div>
             <span className="hidden md:block">contact</span>
             <BsFillTelephoneFill className="md:hidden text-xl text-white" />
