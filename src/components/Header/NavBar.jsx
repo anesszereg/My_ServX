@@ -12,11 +12,11 @@ const NavBar = () => {
 
   return (
     // giving it a height of h-28 to keep the size fixed
-    <nav className={`bg-white flex w-full fixed   h-20`}>
+    <nav className={`bg-white bg-opacity-0 px-8 z-[3] flex w-full fixed   h-20`}>
       <div className="w-full flex max-h-20 h-full md:px-0 px-4 items-start  md:items-center justify-between ">
         {/* object contain scales down the image so its all seen , object center centers it */}
-        <Link className="flex-grow" href={"/"} legacyBehavior>
-          <div className="flex relative w-40  h-full  items-center">
+        <Link className="flex-grow " href={"/"} legacyBehavior>
+          <div className="flex relative w-40  -left-3  h-full  items-center">
             <Image fill className="object-contain object-center" alt="myServX Logo" src={Logo} />
           </div>
         </Link>
