@@ -1,6 +1,5 @@
 
 const FormDevis = (props) => {
-    
     return (
         <div className="">
             <span className="inline-grid grid-cols-2">
