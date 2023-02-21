@@ -13,7 +13,7 @@ const HeroSection = () => {
           <button className="sm:w-72 max-w-xs w-full uppercase transition-all ease-in-out duration-300 hover:bg-opacity-80 text-white font-medium h-14 sm:h-16 bg-blue-600 rounded-lg">
             notre travaile
           </button>
-          <button className="sm:w-60 max-w-xs w-full uppercase transition-all ease-in-out duration-300 hover:border-blue-400 text-slate-900 font-medium h-14 sm:h-16  border-4 border-blue-600 rounded-lg">
+          <button className="sm:w-60 max-w-xs w-full uppercase transition-all ease-in-out duration-300 hover:border-blue-400 dark:text-white text-slate-900 font-medium h-14 sm:h-16  border-4 border-blue-600 rounded-lg">
             explorer
           </button>
         </div>
@@ -21,7 +21,7 @@ const HeroSection = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
-        className="h-full w-full z-[1] opacity-20 absolute top-0 left-0"
+        className="h-full w-full z-[1] opacity-10 absolute top-0 left-0"
         preserveAspectRatio="none"
         viewBox="0 0 1366 768"
       >

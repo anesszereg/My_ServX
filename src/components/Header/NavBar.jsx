@@ -17,7 +17,7 @@ const NavBar = () => {
         {/* object contain scales down the image so its all seen , object center centers it */}
         <Link className="flex-grow " href={"/"} legacyBehavior>
           <div className="flex relative w-40  -left-3  h-full  items-center">
-            <Image fill className="object-contain object-center" alt="myServX Logo" src={Logo} />
+            <Image fill className="object-contain mix-blend-color-burn object-center" alt="myServX Logo" src={Logo} />
           </div>
         </Link>
 
