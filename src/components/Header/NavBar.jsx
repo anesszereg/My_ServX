@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ButtonBurger from "./ButtonBurger";
 import Image from "next/image";
 import Logo from "public/assets/logo.png";
 
@@ -14,7 +13,7 @@ const NavBar = () => {
   return (
     // giving it a height of h-28 to keep the size fixed
     <nav className="bg-white w-full fixed h-20 border-gray-200   ">
-      <div className="w-full flex h-full  items-center justify-between ">
+      <div className="w-full flex h-full md:px-0 px-4  items-center justify-between ">
         {/* object contain scales down the image so its all seen , object center centers it */}
           <Link href={"/"}  legacyBehavior>
             <div className="flex relative w-40  h-full  items-center">
@@ -23,8 +22,7 @@ const NavBar = () => {
             </div>
           </Link>
         
-
-        <Navlinks visibility={isDropdownOpen == true ? "block" : "hidden"} />
+        <Navlinks  />
       </div>
 
       {/* <Sidebar visibility={isSidebarOpen == true ? "block" : "hidden"}>
