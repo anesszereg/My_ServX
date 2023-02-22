@@ -1,6 +1,18 @@
-import React from "react";
 import Link from "next/link";
+import { gsap,Elastic,Power3 } from "gsap";
+import { useEffect,useRef } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const ServicesSection = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const subtitle = useRef();
+  const title = useRef();
+  const cardContainer = useRef();
+  useEffect(() => {
+    gsap.to(subtitle.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Elastic.easeOut,scrollTrigger:subtitle.current})
+    gsap.to(title.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Elastic.easeOut,scrollTrigger:title.current})
+    gsap.to(cardContainer.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Power3.easeOut,scrollTrigger:cardContainer.current})
+  }, [])
+  
   const cards = [
     {
       title: "Marketing Des Reseaux Sociaux",
@@ -226,13 +238,13 @@ const ServicesSection = () => {
   return (
     // outer most container
     <section className="md:h-[calc(100vh-5rem)]  w-full px-8 py-16 ">
-      <div className="h-full w-full flex flex-col items-center gap-y-2 ">
-        <p className="text-xl bg-gradient-to-r font-medium text-transparent from-purple-600 to-blue-600 bg-clip-text ">
+      <div className="h-full w-full overflow-hidden flex flex-col items-center gap-y-2 ">
+        <p ref={subtitle} className="text-xl translate-y-4 opacity-0 bg-gradient-to-r font-medium text-transparent from-purple-600 to-blue-600 bg-clip-text ">
           SERVICES POPULAIRES
         </p>
-        <h3 className="sm:text-5xl text-3xl text-center font-extrabold text-slate-900">Nous aidons les marques avec</h3>
+        <h3 ref={title} className="sm:text-5xl translate-y-16 opacity-0 text-3xl text-center font-extrabold text-slate-900">Nous aidons les marques avec</h3>
         {/* cards container */}
-        <div className="h-full max-w-7xl mt-12 w-full gap-12 [grid-template-columns:_repeat(_auto-fit,_minmax(16rem,_1fr)_);] sm:[grid-template-columns:_repeat(_auto-fit,_minmax(20rem,_1fr)_);] grid">
+        <div ref={cardContainer} className="h-full opacity-0 translate-y-52 max-w-7xl mt-12 w-full gap-12 [grid-template-columns:_repeat(_auto-fit,_minmax(16rem,_1fr)_);] sm:[grid-template-columns:_repeat(_auto-fit,_minmax(20rem,_1fr)_);] grid">
           {cards.map((item, index) => (
             <Card item={item} key={index} />
           ))}
