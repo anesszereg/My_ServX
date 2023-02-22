@@ -20,7 +20,7 @@ const MobileNav = ({ handleClick, activeNav, visible }) => {
           // then use it to select children and animate them
           <li
             key={index}
-            className="h-12 uppercase group font-medium tracking-wider grid dark:text-white text-gray-800 w-full relative"
+            className="h-12 uppercase group font-medium tracking-wider grid  text-gray-800 w-full relative"
           >
             {/* left and translate to center the bottom gradient */}
             <div className="absolute  opacity-100  transition-all ease-in-out duration-500 w-full h-[2px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>

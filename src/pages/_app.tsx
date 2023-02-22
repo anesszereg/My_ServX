@@ -5,17 +5,13 @@ import { useEffect } from "react";
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const intersectors = document.querySelectorAll(".intersect");
       const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-
       const mouse = { x: pos.x, y: pos.y };
       const speed = 0.15;
-      const ball = document.querySelector(".ball");
-      const xSet = gsap.quickSetter(ball, "x", "px");
-      const ySet = gsap.quickSetter(ball, "y", "px");
       const images = document.querySelectorAll(".movingImage");
+      const fastImages = document.querySelectorAll(".fastImage");
       const xImageSet = gsap.quickSetter(images, "x", "px");
-
+      const xFastImage = gsap.quickSetter(fastImages, "x", "px");
       window.addEventListener("mousemove", (e) => {
         mouse.x = e.x;
         mouse.y = e.y;
@@ -23,22 +19,13 @@ export default function App({ Component, pageProps }: AppProps) {
       gsap.ticker.add(() => {
         // adjust speed for higher refresh monitors
         const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-        const offset = 40;
+        const offset = 10;
         pos.x += (mouse.x - pos.x) * dt;
         pos.y += (mouse.y - pos.y) * dt;
-        ySet(pos.y);
-        
-         xSet(pos.x);
-          xImageSet(-pos.x/offset);
+        xImageSet(-pos.x / offset);
+        xFastImage(-pos.x / (offset / 2));
       });
-      intersectors.forEach((item) => {
-        item.addEventListener("mouseenter", (e) => {
-          gsap.to(".ball div", { scale: 3, duration: 0.4 });
-        });
-        item.addEventListener("mouseleave", (e) => {
-          gsap.to(".ball div", { scale: 1, duration: 0.4 });
-        });
-      });
+      
     });
     return () => {
       ctx.revert();
@@ -47,9 +34,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <div className="ball pointer-events-none w-8 h-8 z-50 border grid place-items-center border-orange-200 absolute rounded-full bg-opacity-30">
-        <div className="w-2 h-2 rounded-full  bg-orange-400"></div>
-      </div>
       <Component {...pageProps} />
     </>
   );
