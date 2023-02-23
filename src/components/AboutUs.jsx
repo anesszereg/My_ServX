@@ -1,7 +1,7 @@
 import Image from "next/image";
 const AboutUs = () => {
   return (
-    <section className="md:min-h-[calc(100vh-5rem)] py-12 bg-[#171717] w-full md:px-8 grid place-items-center">
+    <section className="md:min-h-[calc(100vh-5rem)] 2xl:min-h-fit py-12 bg-[#171717] w-full md:px-8 grid place-items-center">
       <div className="lg:grid flex items-center flex-col  gap-y-16 lg:grid-rows-1 lg:grid-cols-2 lg:place-items-end px-4 h-full w-full max-w-7xl">
         {/* content */}
         <div className="w-full lg:h-full flex flex-col gap-y-6">

@@ -2,7 +2,7 @@ import React from "react";
 import MovingPhones from "./MovingPhones";
 const HeroSection = () => {
   return (
-    <section className="h-[70rem] relative w-full px-8 pt-28 md:pt-40">
+    <section className="h-[70rem] 2xl:h-[50rem] relative w-full px-8 pt-28 md:pt-40">
       <div className="flex relative z-[2] items-center lg:items-start gap-y-16 leading-loose font-bold flex-col">
         <h1 className="md:text-7xl text-4xl sm:text-6xl lg:text-left sm:text-center">
           Une <span className="text-blue-600">créativité</span> sans <div className="md:block hidden"></div> limite, une{" "}

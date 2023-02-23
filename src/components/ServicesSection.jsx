@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { gsap,Elastic,Power3 } from "gsap";
+import { gsap,Power3 } from "gsap";
 import { useEffect,useRef } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const ServicesSection = () => {
@@ -12,7 +12,6 @@ const ServicesSection = () => {
     gsap.to(title.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Power3.easeOut,scrollTrigger:title.current})
     gsap.to(cardContainer.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Power3.easeOut,scrollTrigger:cardContainer.current})
   }, [])
-  
   const cards = [
     {
       title: "Marketing Des Reseaux Sociaux",
@@ -248,7 +247,6 @@ const ServicesSection = () => {
           {cards.map((item, index) => (
             <Card item={item} key={index} />
           ))}
-          
         </div>
       </div>
     </section>
