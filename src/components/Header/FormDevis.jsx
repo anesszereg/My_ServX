@@ -1,12 +1,11 @@
-const FormDevis = (props) => {
+const FormDevis = ({visible,activeNav}) => {
   return (
-    <div className="">
-      {/* {props.children} */}
-      <h2 className="text-3xl font-bold pt-4 pb-10 text-gray-800 relative">Nous contacter par ecris</h2>
+    <div className={`${visible  ? "block" : " hidden"}`}>
+      <h2 className="text-3xl font-bold pt-4 pb-10 dark:text-white text-gray-800 relative">Nous contacter par ecris</h2>
       <form
         action=""
         method="get"
-        className="flex items-center flex-col text-slate-900 space-y-8 mb-4 sm:w-full pr-2 pl-2"
+        className="flex items-center flex-col  text-slate-900 space-y-8 mb-4 w-full pr-2 pl-2"
       >
         <div className="group w-full outline-transparent bg-white py-1  outline outline-2 shadow-sm focus-within:outline-sky-400 transition-all ease-in-out duration-300   h-12  items-center      rounded-lg">
           <input
