@@ -79,7 +79,7 @@ export default Work
 
 const Card =({item})=>{
     return(
-        <div className="w-full px-2 group justify-end  relative flex flex-col items-start gap-y-4 h-[28rem]">
+        <div className="w-full px-2 overflow-hidden group justify-end  relative flex flex-col items-start gap-y-4 h-[28rem]">
             <div className="relative w-full h-80">
             <div className={`h-full z-[1] aspect-square transition-all duration-700 ease-out group-hover:scale-95 rounded-lg w-full ${item.bg} absolute top-0`}>
             </div>
@@ -87,7 +87,7 @@ const Card =({item})=>{
                 <Image className="object-contain object-center"  fill src={item.image} />
             </div>
             </div>
-            <p className="text-2xl font-bold">{item.title}</p>
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-2xl transition-colors hover:text-slate-600 duration-200 font-bold">{item.title}</a>
             <p className="font-medium text-lg">{item.sub}</p>
         </div>
     )
