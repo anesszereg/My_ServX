@@ -8,8 +8,8 @@ const ServicesSection = () => {
   const title = useRef();
   const cardContainer = useRef();
   useEffect(() => {
-    gsap.to(subtitle.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Elastic.easeOut,scrollTrigger:subtitle.current})
-    gsap.to(title.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Elastic.easeOut,scrollTrigger:title.current})
+    gsap.to(subtitle.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Power3.easeOut,scrollTrigger:subtitle.current})
+    gsap.to(title.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Power3.easeOut,scrollTrigger:title.current})
     gsap.to(cardContainer.current,{y:0,delay:0.2,opacity:1,duration:1,ease:Power3.easeOut,scrollTrigger:cardContainer.current})
   }, [])
   
@@ -237,14 +237,14 @@ const ServicesSection = () => {
   ];
   return (
     // outer most container
-    <section className="md:h-[calc(100vh-5rem)]  w-full px-8 py-16 ">
+    <section className=" w-full px-8 py-16 ">
       <div className="h-full w-full overflow-hidden flex flex-col items-center gap-y-2 ">
         <p ref={subtitle} className="text-xl translate-y-4 opacity-0 bg-gradient-to-r font-medium text-transparent from-purple-600 to-blue-600 bg-clip-text ">
           SERVICES POPULAIRES
         </p>
         <h3 ref={title} className="sm:text-5xl translate-y-16 opacity-0 text-3xl text-center font-extrabold text-slate-900">Nous aidons les marques avec</h3>
         {/* cards container */}
-        <div ref={cardContainer} className="h-full opacity-0 translate-y-52 max-w-7xl mt-12 w-full gap-12 [grid-template-columns:_repeat(_auto-fit,_minmax(16rem,_1fr)_);] sm:[grid-template-columns:_repeat(_auto-fit,_minmax(20rem,_1fr)_);] grid">
+        <div ref={cardContainer} className="h-full p-4 opacity-0 translate-y-52 max-w-7xl w-full gap-12 [grid-template-columns:_repeat(_auto-fit,_minmax(14rem,_1fr)_);] sm:[grid-template-columns:_repeat(_auto-fit,_minmax(20rem,_1fr)_);] grid">
           {cards.map((item, index) => (
             <Card item={item} key={index} />
           ))}
@@ -260,8 +260,8 @@ export default ServicesSection;
 // creating one card component
 const Card = ({ item }) => {
   return (
-    <div className="md:h-96 h-80 relative overflow-hidden hover:-translate-y-3   group transition-all duration-500 ease-in-out  py-4 outline outline-2 outline-sky-100 rounded-xl from-white to-white w-full  px-4 shadow-lg">
-      <div className="h-full z-[0] opacity-0 transition-all druation-500 ease-in-out group-hover:opacity-100 absolute bg-gradient-to-tr from-purple-400 to-sky-400 w-full inset-0"></div>
+    <div className="md:h-96 h-80 relative  hover:-translate-y-3   group transition-all duration-500 ease-in-out  py-4 outline outline-2 outline-sky-100 rounded-xl from-white to-white w-full px-2  sm:px-4 shadow-lg">
+      <div className="h-full rounded-xl z-[0] opacity-0 transition-all druation-500 ease-in-out group-hover:opacity-100 absolute bg-gradient-to-tr from-purple-400 to-sky-400 w-full inset-0"></div>
       <div className="gap-y-4 relative z-[1] flex flex-col items-center">
         {item.icon}
         <p className="sm:text-2xl text-xl  transition-colors ease-in-out duration-75 group-hover:text-white text-slate-700 sm:w-72 text-center font-bold capitalize">{item.title}</p>
