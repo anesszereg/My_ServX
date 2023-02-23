@@ -4,7 +4,7 @@ import { IoMdMail } from "react-icons/io";
 import {MdLocationOn} from "react-icons/md"
 const Footer = () => {
   return (
-    <footer className="h-[30rem] bg-stone-900 flex flex-col items-center justify-between w-full px-16 py-12">
+    <footer className="h-[30rem] overflow-hidden bg-stone-900 flex flex-col items-center justify-between w-full px-16 py-12">
       <div className="h-full max-w-7xl gap-4  w-full grid grid-cols-12">
         {/* social */}
         <div className="flex col-span-4  gap-y-4 flex-col h-full w-full">
