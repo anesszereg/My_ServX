@@ -13,11 +13,12 @@ const MovingPhones = () => {
     <div className="absolute left-0 z-[1] overflow-x-hidden flex items-end  justify-end w-[150vw] h-full pt-20  top-0 ">
       {/* faire des telephones qui bougent  */}
         
-      <div className=" place-items-center w-full  overflow-x-hidden  overflow-y-hidden  flex   h-full">
+      <div className=" imageContainer place-items-center w-full  overflow-x-hidden  overflow-y-hidden  flex   h-full">
         {images.map(
           (img, index) =>
             index <= 2 && (
               <div
+                key={index}
                 className={`relative ${img.slow ? "movingImage" : "fastImage"} ${img.top}   movingImage ${
                   img.small ? "w-52 h-52" : img.main ? "w-[50rem] h-[50rem]" : "w-[40rem] h-[40rem]"
                 }`}
