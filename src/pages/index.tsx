@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import { NavBar,HeroSection,Work,ServicesSection ,AboutUs} from "../components";
+import { NavBar,HeroSection,Work,ServicesSection ,AboutUs,Technologies} from "../components";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
       <ServicesSection />
       <AboutUs />
       <Work />
+      <Technologies />
     </div>
   );
 }

@@ -81,9 +81,9 @@ const Card =({item})=>{
     return(
         <div className="w-full px-2 overflow-hidden group justify-end  relative flex flex-col items-start gap-y-4 h-[28rem]">
             <div className="relative w-full h-80">
-            <div className={`h-full z-[1] aspect-square transition-all duration-700 ease-out group-hover:scale-95 rounded-lg w-full ${item.bg} absolute top-0`}>
+            <div className={`h-full z-[1] aspect-square transition-all duration-700 ease-out group-hover:scale-95 rounded-xl w-full ${item.bg} absolute top-0`}>
             </div>
-            <div className={`h-full z-[2] aspect-square transition-all duration-700 ease-out group-hover:scale-[1.02] grid place-items-center rounded-lg w-full  absolute top-0`}>
+            <div className={`h-full z-[2] aspect-square transition-all duration-700 ease-out group-hover:scale-[1.02] grid place-items-center rounded-xl w-full  absolute top-0`}>
                 <Image className="object-contain object-center"  fill src={item.image} />
             </div>
             </div>
