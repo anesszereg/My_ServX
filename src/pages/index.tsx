@@ -26,7 +26,6 @@ export default function Home() {
           </button>
       </div>
       <div className="h-40">
-        
       </div>
       <Footer />
     </div>
