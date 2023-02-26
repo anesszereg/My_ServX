@@ -19,7 +19,7 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
             // then use it to select children and animate them
             <li key={index} className="h-full  uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-20 relative">
               {/* left and translate to center the bottom gradient */}
-              <div className="absolute opacity-0 group-hover:opacity-100 left-[50%] -translate-x-[50%] transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
+              <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
               <Link className="h-full cursor-pointer w-full grid place-items-center" smooth offset={-80} to={item.slug}>{item.title}</Link>
             </li>
           ))}
