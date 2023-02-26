@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="flex items-start gap-x-4 w-full">
             <BsTelephoneFill className="text-3xl relative top-1 text-gray-400" />
             <div className="h-full flex flex-col gap-y-1">
-              <p className="text-lg text-gray-300 font-bold "> Email</p>
+              <p className="text-lg text-gray-300 font-bold "> Phone</p>
               <a className="text-gray-400 font-medium" href="tel:+33 613 940 182">
                 +33 613 940 182
               </a>
@@ -52,7 +52,7 @@ const Footer = () => {
           <div className="flex items-start gap-x-4 w-full">
             <MdLocationOn className="text-3xl relative top-1 text-gray-400" />
             <div className="h-full flex flex-col gap-y-1">
-              <p className="text-lg text-gray-300 font-bold "> Email</p>
+              <p className="text-lg text-gray-300 font-bold "> Address</p>
               <p className="text-gray-400 font-medium">19 Quai de Rive Neuve, 13007 Marseille</p>
             </div>
           </div>
