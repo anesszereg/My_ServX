@@ -51,7 +51,7 @@ const Technologies = () => {
     },
   ];
   return (
-    <section className=" w-full pb-16  sm:px-8 pt-28">
+    <section name="/blog" className=" w-full pb-16  sm:px-8 pt-28">
       <div className="h-full w-full gap-y-6 flex flex-col items-center">
         <p
           ref={subtitle}
@@ -83,7 +83,7 @@ export default Technologies;
 
 const Card = ({ item }) => {
   return (
-    <div className="w-full gap-y-6 transition-transform duration-500 ease-out hover:-translate-y-4 outline outline-sky-100 shadow-lg rounded-xl  overflow-hidden group   relative flex flex-col items-start justify-between h-[33rem]">
+    <div  className="w-full gap-y-6 transition-transform duration-500 ease-out hover:-translate-y-4 outline outline-sky-100 shadow-lg rounded-xl  overflow-hidden group   relative flex flex-col items-start justify-between h-[33rem]">
       <div className="w-full h-72 relative">
         <Image src={item.image} fill className="object-cover object-center w-full h-full" />
       </div>

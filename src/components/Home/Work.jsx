@@ -58,7 +58,7 @@ const Work = () => {
 
     ];
   return (
-    <section className=" w-full pb-16  sm:px-8 pt-28">
+    <section name="/work" className=" w-full pb-16  sm:px-8 pt-28">
         <div className='h-full w-full flex flex-col items-center'>
         <p ref={subtitle} className="text-xl translate-y-4 opacity-0 bg-gradient-to-r font-medium text-transparent from-purple-600 to-blue-600 bg-clip-text ">
           SERVICES POPULAIRES
