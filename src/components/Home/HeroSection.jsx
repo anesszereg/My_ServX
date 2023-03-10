@@ -1,22 +1,48 @@
-import {useEffect,useRef} from "react";
+import { useEffect, useRef } from "react";
 import MovingPhones from "./MovingPhones";
-import { gsap,Power3 } from "gsap";
+import { gsap, Power3 } from "gsap";
 const HeroSection = () => {
-  const tl = gsap.timeline()
+  const tl = gsap.timeline();
   const text = useRef();
   useEffect(() => {
-    const ctx = gsap.context(()=>{
-      tl.from(text.current,{opacity:0,duration:1,ease:Power3.easeInOut,yPercent:5})
-        .from(".imageContainer",{opacity:0,duration:2,ease:Power3.easeInOut,yPercent:10},"-=1")
-    })
-    return()=>{
-      ctx.revert()
-    }
-  }, [])
-  
+    const ctx = gsap.context(() => {
+      tl.from(text.current, { opacity: 0, duration: 1, ease: Power3.easeInOut, yPercent: 5 }).from(
+        ".imageContainer",
+        { opacity: 0, duration: 2, ease: Power3.easeInOut, yPercent: 10 },
+        "-=1"
+      );
+      const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      const mouse = { x: pos.x, y: pos.y };
+      const speed = 0.15;
+      const images = document.querySelectorAll(".movingImage");
+      const fastImages = document.querySelectorAll(".fastImage");
+      const xImageSet = gsap.quickSetter(images, "x", "px");
+      const xFastImage = gsap.quickSetter(fastImages, "x", "px");
+      window.addEventListener("mousemove", (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+      });
+      gsap.ticker.add(() => {
+        // adjust speed for higher refresh monitors
+        const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+        const offset = 10;
+        pos.x += (mouse.x - pos.x) * dt;
+        pos.y += (mouse.y - pos.y) * dt;
+        xImageSet(-pos.x / offset);
+        xFastImage(-pos.x / (offset / 2));
+      });
+    });
+    return () => {
+      ctx.revert();
+    };
+  }, []);
+
   return (
     <section name="/home" className="h-[70rem] 2xl:h-[50rem] relative w-full px-8 pt-28 md:pt-40">
-      <div ref={text} className="flex relative z-[2] items-center lg:items-start gap-y-16 leading-loose font-bold flex-col">
+      <div
+        ref={text}
+        className="flex relative z-[2] items-center lg:items-start gap-y-16 leading-loose font-bold flex-col"
+      >
         <h1 className="md:text-7xl text-4xl sm:text-6xl text-slate-700 lg:text-left sm:text-center">
           Une <span className="text-blue-600">créativité</span> sans <div className="md:block hidden"></div> limite, une{" "}
           <span className="text-blue-600">sécurité</span> <div className="md:block hidden"></div> sans faille pour votre{" "}
@@ -31,10 +57,7 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <svg
-        className="h-full w-full z-[1] opacity-10 absolute top-0 left-0"
-        viewBox="0 0 1366 768"
-      >
+      <svg className="h-full w-full z-[1] opacity-10 absolute top-0 left-0" viewBox="0 0 1366 768">
         <g mask='url("#SvgjsMask1077")' fill="none">
           <path
             d="M0 54.45C9.58 20.16 19.49 9.69 53.65 0C115.49 -17.54 122.82 0 192 0C288 0 288 0 384 0C474.18 0 478.36 -7.82 564.36 0C574.36 0.91 570.18 17.45 576 17.45C581.82 17.45 577.64 0.91 587.64 0C673.64 -7.82 677.82 0 768 0C864 0 864 0 960 0C1056 0 1056 0 1152 0C1248 0 1248 0 1344 0C1413.34 0 1415.91 -10.11 1482.67 0C1511.91 4.43 1528.76 3.02 1536 29.09C1555.42 99.02 1536 110.55 1536 192C1536 288 1536 288 1536 384C1536 480 1536 480 1536 576C1536 605.21 1546.35 607.92 1536 634.43C1508.88 703.92 1515.48 730.15 1461.07 768C1419.48 796.93 1402.53 768 1344 768C1248 768 1248 768 1152 768C1076.82 768 1069.72 784.12 1001.64 768C973.72 761.39 981.63 722.53 960 722.53C936.81 722.53 942.21 760.85 912 768C846.21 783.58 840 768 768 768C672 768 672 768 576 768C485.12 768 477.27 779.45 394.24 768C381.27 766.21 390.69 741.52 384 741.52C376.42 741.52 380.72 765.93 365.71 768C284.72 779.17 278.86 768 192 768C96 768 48 816 0 768C-48 720 0 672 0 576C0 480 0 480 0 384C0 288 0 288 0 192C0 123.23 -17.24 116.16 0 54.45"

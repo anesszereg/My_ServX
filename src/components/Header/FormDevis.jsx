@@ -12,7 +12,6 @@ const FormDevis = ({ visible, activeNav }) => {
   } = useForm();
   const router = useRouter();
   const Submit = (data) => {
-    // addReply(e.target.value)
     console.log(data)
     addReply({ ...data, action: "addContact", state: "new", page: router.asPath })
       .then((res) => res.json())
