@@ -50,11 +50,9 @@ const HeroSection = () => {
         </h1>
         <div className="flex sm:flex-row justify-center lg:justify-start flex-col w-full items-center gap-y-4 sm:gap-x-12">
           <button className="sm:w-72 max-w-xs w-full uppercase transition-all ease-in-out duration-300 hover:bg-blue-500 text-white font-medium h-14 sm:h-16 bg-blue-600 rounded-lg">
-            notre travaile
+          explorer
           </button>
-          <button className="sm:w-60 max-w-xs w-full uppercase transition-all ease-in-out duration-300 hover:border-blue-500  text-slate-700 font-medium h-14 sm:h-16  border-4 border-blue-600 rounded-lg">
-            explorer
-          </button>
+          
         </div>
       </div>
       <svg className="h-full w-full z-[1] opacity-10 absolute top-0 left-0" viewBox="0 0 1366 768">

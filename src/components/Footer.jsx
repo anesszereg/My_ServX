@@ -27,6 +27,9 @@ const Footer = () => {
               <BsInstagram className="text-xl text-gray-400" />
             </a>
           </div>
+          <a href="" className="text-md text-gray-400">
+          © 2023 MyServX Tous droits réservés.
+          </a>
         </div>
         {/* contact */}
         <div className="flex col-span-4  gap-y-6 flex-col pt-4 h-full w-full sm:pt-5">
