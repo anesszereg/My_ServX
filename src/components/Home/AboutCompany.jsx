@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap,Power3 } from "gsap";
+import CountUp from 'react-countup';
 
 
 function AboutCompany() {
@@ -50,15 +51,15 @@ function AboutCompany() {
 
                 <div className="flex justify-around mt-6">
                         <div className="flex flex-col">
-                            <p className='font-bold text-blog1 text-4xl '> 450</p>
+                            <p className='font-bold text-blog1 text-4xl '><CountUp end={450} duration={4} /> </p>
                             <p ref={text3} className='text-text-blog opacity-0 translate-y-4   text-lg'>Happy client</p>
                         </div>
                         <div className="flex flex-col">
-                            <p className='font-bold text-blog1 text-4xl '> 95k</p>
+                            <p className='font-bold text-blog1 text-4xl '><CountUp end={95} duration={4} /> k</p>
                             <p ref={text4} className='text-text-blog opacity-0 translate-y-4   text-lg'>Hours Worked </p>
                         </div>
                         <div className="flex flex-col">
-                            <p className='font-bold text-blog1 text-4xl '> 850</p>
+                            <p className='font-bold text-blog1 text-4xl '><CountUp end={850} duration={4} /> </p>
                             <p ref={text5} className='text-text-blog opacity-0 translate-y-4   text-lg'>Project Done</p>
                         </div>
                 </div>
