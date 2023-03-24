@@ -8,51 +8,51 @@ function WorkCategory() {
     const work = [
         {
             title:'Social Networking',
-            url:'/public/assets/Work-categoy/icon-1.png'
+            url:'/assets/Work-categoy/icon-1.png'
         },
         {
             title:'Digital Marketing',
-            url:"/public/assets/Work-categoy/icon-2.png"
+            url:"/assets/Work-categoy/icon-2.png"
         }   , 
         {
             title:'Ecommerce Development',
-            url:"/public/assets/Work-categoy/icon-3.png"
+            url:"/assets/Work-categoy/icon-3.png"
         },
         {
             title:'Video Service',
-            url:"/public/assets/Work-categoy/icon-4.png"
+            url:"/assets/Work-categoy/icon-4.png"
         },
         {
             title:'Banking Service',
-            url:"/public/assets/Work-categoy/icon-5.png"
+            url:"/assets/Work-categoy/icon-5.png"
         },
         {
             title:'Enterprise Service',
-            url:"/public/assets/Work-categoy/icon-6.png"
+            url:"/assets/Work-categoy/icon-6.png"
         },
         {
             title:'Education Service',
-            url:"/public/assets/Work-categoy/icon-7.png"
+            url:"/assets/Work-categoy/icon-7.png"
         },
         {
             title:'Tour and Travels',
-            url:"/public/assets/Work-categoy/icon-8.png"
+            url:"/assets/Work-categoy/icon-8.png"
         }   ,     
         {
             title:'Health Service',
-            url:"/public/assets/Work-categoy/icon-9.png"
+            url:"/assets/Work-categoy/icon-9.png"
         },
         {
             title:'Event & Ticket',
-            url:"/public/assets/Work-categoy/icon-10.png"
+            url:"/assets/Work-categoy/icon-10.png"
         }   , 
         {
             title:'Restaurant  Service',
-            url:"/public/assets/Work-categoy/icon-11.png"
+            url:"/assets/Work-categoy/icon-11.png"
         },
         {
             title:'Business Consultant',
-            url:"/public/assets/Work-categoy/icon-12.png"
+            url:"/assets/Work-categoy/icon-12.png"
         }
     
     ]
@@ -94,8 +94,9 @@ const WorkCard = ({item}) => {
     return (
         <div className="flex flex-col justify-center border items-center border-text-blog  gap-3 backdrop-blur-lg rounded-xl  h-40 w-40 rounded-tr-md rounded-bl-md">
                 <Image src={item.url} alt="" 
-                width={100}
-                height={100} />
+            //    fill
+            width={70}
+            height={70} />
                 <p className=" text-work-card font-normal text-center w-14 ">
                     {item.title}
                 </p>
