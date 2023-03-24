@@ -19,7 +19,7 @@ const FormDevis = ({ visible, activeNav }) => {
   };
   return (
     <div className={`${visible ? "block" : " hidden"}`}>
-      <h2 className="text-3xl font-bold pt-4 pb-10  text-gray-800 relative">Nous contacter par ecris</h2>
+      <h2 className="text-3xl font-bold pt-4 pb-10  text-gray-800 relative">Nous contacter par &eacute;crit</h2>
       <form
         onSubmit={handleSubmit(Submit)}
         className="flex items-center flex-col  text-slate-900 space-y-8 mb-4 w-full pr-2 pl-2"
