@@ -36,3 +36,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.bg_image{
+  background-image: url('../../public/assets/Work-categoy/tt-work-bg.jpg');
+}

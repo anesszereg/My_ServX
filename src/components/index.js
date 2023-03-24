@@ -10,3 +10,4 @@ export {default as AboutUs} from "./Home/AboutUs.jsx"
 export {default as Work} from "./Home/Work.jsx"
 export {default as Technologies} from "./Home/Technologies.jsx"
 export {default as StaticSection} from './Home/StaticSection.jsx'
+export {default as WorkCategory} from './Home/WorkCategory.jsx'

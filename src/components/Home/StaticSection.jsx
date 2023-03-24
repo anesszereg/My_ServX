@@ -1,5 +1,5 @@
 import {useSpring, animated} from 'react-spring'
-import Computer from '../../../public/assets/stats/computers.svg'
+import Computer from '/public/assets/stats/computers.svg'
 
 
 // const Number = ({n}) => {

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import { NavBar,Footer,HeroSection,Work,ServicesSection ,AboutUs, StaticSection ,Technologies} from "../components";
+import { NavBar,Footer,HeroSection,Work,ServicesSection ,AboutUs, StaticSection ,Technologies, WorkCategory} from "../components";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
       <ServicesSection />
       <AboutUs />
       <StaticSection/>
+      <WorkCategory/>
       <Work />
       <Technologies />
       <div className="w-full gap-8 max-w-7xl px-4 md:flex-row flex-col flex items-center justify-evenly">

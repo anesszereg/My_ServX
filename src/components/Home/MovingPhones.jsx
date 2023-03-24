@@ -10,20 +10,20 @@ const MovingPhones = () => {
     // { url: "/assets/tablet3.webp", main: false, slow: true, small: true, top: "top-20" },
   ];
   return (
-    <div className="absolute left-0 z-[1] overflow-x-hidden flex items-end  justify-end w-[150vw] h-full pt-20  top-0 ">
+    <div className="absolute right-0 z-[1] overflow-x-hidden flex items-end  justify-end w-[100vw] h-full  top-0 ">
       {/* faire des telephones qui bougent  */}
         
-      <div className=" imageContainer place-items-center w-full  overflow-x-hidden  overflow-y-hidden  flex   h-full">
+      <div className=" imageContainer place-items-center w-full  overflow-x-hidden justify-end  overflow-y-hidden  flex   h-full">
         {images.map(
           (img, index) =>
             index <= 2 && (
               <div
                 key={index}
                 className={`relative ${img.slow ? "movingImage" : "fastImage"} ${img.top}   movingImage ${
-                  img.small ? "w-52 h-52" : img.main ? "w-[50rem] h-[50rem]" : "w-[40rem] h-[40rem]"
+                  img.small ? "w-[15rem] h-[15rem]  object-contain" : img.main ? "w-[30rem] h-[30rem]  object-contain" : "w-[20rem] h-[20rem]"
                 }`}
               >
-                <Image src={img.url} fill className="w-full h-full object-contain object-center" />
+                <Image src={img.url}  fill className="w-full h-full object-contain object-center" />
               </div>
             )
         )}
