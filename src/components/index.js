@@ -11,3 +11,7 @@ export {default as Work} from "./Home/Work.jsx"
 export {default as Technologies} from "./Home/Technologies.jsx"
 export {default as StaticSection} from './Home/StaticSection.jsx'
 export {default as WorkCategory} from './Home/WorkCategory.jsx'
+export {default as MissionVission} from './Home/MissionVission.jsx'
+export {default as Philosophy} from './Home/Philosophy.jsx'
+export {default as AboutCompany} from './Home/AboutCompany.jsx'
+export {default as DescribSection} from './Home/DescribSection.jsx'

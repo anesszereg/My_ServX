@@ -39,4 +39,10 @@
 
 .bg_image{
   background-image: url('../../public/assets/Work-categoy/tt-work-bg.jpg');
+
+}
+.bg_about_company{
+  background-image: url('../../public/assets/about/dot_bg.png');
+  background-repeat: repeat;
+  
 }

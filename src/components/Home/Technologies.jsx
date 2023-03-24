@@ -91,7 +91,7 @@ const Card = ({ item }) => {
     <div  className="w-full gap-y-6 transition-transform duration-500 ease-out hover:-translate-y-4 outline outline-sky-100 shadow-lg rounded-xl  overflow-hidden group   relative flex flex-col items-start justify-between h-[33rem]">
       <div className="w-full h-72 relative flex justify-center  ">
         <Image src={item.image} fill className="object-cover object-center w-full h-full" />
-      <div className=" flex justify-between items-center p-5 right-11 rounded-3xl  h-9  w-10/12 absolute -bottom-4 font-bold  bg-gradient-to-r  from-blog1 to-blog2 to-blog3   ">
+      <div className=" flex justify-between items-center p-5 right-8 rounded-3xl  h-9  w-10/12 absolute -bottom-4 font-bold  bg-gradient-to-r  from-blog1 to-blog2 to-blog3   ">
         <div className="flex items-center  gap-1 justify-between text-white">
         <BsFillTagFill size={15} className="mt-2" color='#fff'/>
           <p>{item.name}</p>
