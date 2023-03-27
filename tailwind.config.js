@@ -21,7 +21,10 @@ module.exports = {
         'mission':'#e2f3ff',
         'vision':'#fffbef',
         'describe':'rgb(247, 252, 255)',
-        'describe-br':'rgb(212, 240, 255)'
+        'describe-br':'rgb(212, 240, 255)',
+        'button1':'#fc00c7',
+        'button2':'#1c4efd',
+        'button3':'#00aded'
       },
       borderRadius:{
         "md":'50px'
@@ -33,6 +36,12 @@ module.exports = {
         },
       backgroundImage:{
         "workCategory":"url(/public/assets/Work-categoy/tt-work-bg.jpg)"
+      },
+      fontSize:{
+        xl:'22px',
+        lg:'17px',
+        '4xl':'40px'
+        
       }
 
     },

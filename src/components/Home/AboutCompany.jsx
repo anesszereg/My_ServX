@@ -31,17 +31,19 @@ function AboutCompany() {
 
 
     return (
-        <div className="bg_about_company flex justify-center  h-full w-full py-28 px-16  gap-10 mb-10 ">
-            <div className="flex  opacity-0 translate-y-4  " ref={cardContainer}>
+        <div className="bg_about_company flex lg:flex-row flex-col justify-center items-center h-full w-full py-28 px-16   mb-10 ">
+            <div className="flex  opacity-0 translate-y-4  lg:w-2/6 w-9/12 mb-5 " ref={cardContainer}>
                 <Image src='/assets/about/company-about.png'
                     width={450}
-                    height={450}/>
+                    height={450}
+                    className=' flex h-full w-full'
+                    />
             </div>
-            <div className="flex flex-col gap-4  w-3/6">
+            <div className="flex flex-col lg:items-start items-center gap-4 lg:w-2/6 lg:h-2/6">
                 <p ref={title} className='text-work  opacity-0 translate-y-4  font-normal text-lg'>
                     ABOUT US
                 </p>
-                <p ref={subtitle} className='text-work-card leading-tight  font-bold text-5xl  mb-3 opacity-0 translate-y-4 '>ABOUT US</p>
+                <p ref={subtitle} className='text-work-card leading-tight  font-bold lg:text-5xl text-[28px] mb-3 opacity-0 translate-y-4 '>ABOUT AGENCY</p>
                 <p ref={text} className='text-text-blog  text-lg w-11/12 opacity-0 translate-y-4 '>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat autem porro quasi cumque possimus. Modi similique animi beatae quo, libero ipsa officia deserunt velit neque tempore eveniet dolore perspiciatis veritatis!
                 </p>
@@ -49,7 +51,7 @@ function AboutCompany() {
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat autem porro quasi cumque possimus. Modi similique animi beatae quo, libero ipsa officia deserunt velit neque tempore eveniet dolore perspiciatis veritatis!
                 </p>
 
-                <div className="flex justify-around mt-6">
+                <div className="flex justify-between items-center w-10/12 flex-col md:flex-row lg:flex-row mt-6">
                         <div className="flex flex-col">
                             <p className='font-bold text-blog1 text-4xl '><CountUp end={450} duration={4} /> </p>
                             <p ref={text3} className='text-text-blog opacity-0 translate-y-4   text-lg'>Happy client</p>

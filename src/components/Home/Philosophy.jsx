@@ -51,22 +51,22 @@ function Philosophy() {
     ]
 
     return (
-        <div className='flex flex-col py-28 px-28 gap-3'>
-            <p ref={title} className=' translate-y-4 opacity-0  text-work text-center  font-normal text-lgk'>
+        <div className='flex flex-col items-center justify-center py-28 px-6  lg:px:20 gap-3'>
+            <p ref={title} className=' translate-y-4 opacity-0  text-work text-center  font-normal text-lg'>
                 OUR PHILOSOPHY</p>
-            <p ref={subtitle} className=' translate-y-4 opacity-0  text-work-card leading-tight text-center font-bold text-5xl  mb-10'>Our Business Philosophy</p>
+            <p ref={subtitle} className=' translate-y-4 opacity-0  text-work-card leading-tight text-center font-bold lg:text-5xl  text-4xl mb-10'>Our Business Philosophy</p>
 
-            <div className="flex gap-10 h-full w-full mb-10">
-                <div ref={cardContainer} className="flex  translate-y-4 opacity-0  ">
+            <div className="flex justify-center items-center lg:w-3/6  lg:flex-row flex-col  gap-16 w-9/12 h-9/12  mb-10">
+                <div ref={cardContainer} className="flex  lg:h-5/12 lg:w-5/12 h-10/12 w-10/12 translate-y-4 opacity-0  ">
 
                     <Image src={
                             content[0].url
                         }
                         width={470}
                         height={530}
-                        className=" rounded-3xl"/>
+                        className=" rounded-xl h-full w-full"/>
                 </div>
-                <div ref={text2} className="flex flex-col gap-4 translate-y-4 opacity-0 justify-center w-3/6">
+                <div ref={text2} className="flex flex-col gap-4 translate-y-4 opacity-0 justify-center items-center lg:items-start lg:w-3/6">
                     <p  className='text-work     font-normal text-lg'>
                         {
                         content[0].title
@@ -83,9 +83,9 @@ function Philosophy() {
                 </div>
 
             </div>
-            <div className="flex gap-10 h-full w-full mb-10">
+            <div className="flex gap-10 w-9/12 h-9/12 justify-center items-center lg:w-3/6  lg:flex-row flex-col-reverse mb-10">
 
-                <div ref={text} className="flex  translate-y-4 opacity-0  flex-col gap-4 justify-center w-3/6 ">
+                <div ref={text} className="flex  translate-y-4 opacity-0  flex-col gap-4 justify-center items-center lg:items-start lg:w-3/6 ">
                     <p className='   text-work   font-normal text-lgk'>
                         {
                         content[1].title
@@ -100,28 +100,28 @@ function Philosophy() {
                     }</p>
 
                 </div>
-                <div ref={cardContainer2} className="flex shadow-2xl rounded-3xl  translate-y-4 opacity-0   ">
+                <div ref={cardContainer2} className="flex shadow-2xl h-10/12 w-10/12 rounded-xl lg:h-5/12 lg:w-5/12  translate-y-4 opacity-0   ">
 
                     <Image src={
                             content[1].url
                         }
                         width={500}
                         height={500}
-                        className=" rounded-3xl  "/>
+                        className=" rounded-xl  h-full w-full "/>
                 </div>
 
             </div>
-            <div className="flex gap-10 h-full w-full mb-10">
-                <div className="flex "ref={cardContainer3}>
+            <div className="flex gap-10  w-9/12 h-9/12 justify-center items-center lg:w-3/6  lg:flex-row  flex-col mb-10">
+                <div className="flex  lg:h-5/12 lg:w-5/12 h-10/12 w-10/12 "ref={cardContainer3}>
 
                     <Image src={
                             content[2].url
                         }
                         width={500}
                         height={500}
-                        className=" rounded-3xl"/>
+                        className=" rounded-xl  h-full w-full"/>
                 </div>
-                <div ref={text3} className="flex flex-col  translate-y-4 opacity-0  gap-4 justify-center w-3/6">
+                <div ref={text3} className="flex flex-col  translate-y-4 opacity-0  gap-4 justify-center items-center lg:items-start lg:w-3/6">
                     <p className='text-work   font-normal text-lgk'>
                         {
                         content[2].title

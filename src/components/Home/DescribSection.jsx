@@ -53,10 +53,10 @@ function DescribSection() {
     return (
         <div className=" flex flex-col justify-center items-center gap-4     py-24 px-16 h-full w-full bg-describe ">
             <p ref={subtitle} className='text-work   translate-y-4 opacity-0 font-normal text-lg'>WE ARE AWESOME</p>
-            <p ref={title} className='text-work-card translate-y-16 opacity-0   leading-tight  font-bold text-5xl  mb-3'>
+            <p ref={title} className='text-work-card translate-y-16 opacity-0   leading-tight  font-bold lg:text-5xl text-[28px] mb-3'>
                 Why Choose ServX
             </p>
-            <div ref={cardContainer} className="flex  gap-6 opacity-0 translate-y-52 ">
+            <div ref={cardContainer} className="lg:flex grid  lg:flex-wrap md:grid-cols-2 md:grid-rows-2 gap-6 opacity-0 translate-y-52 ">
                 {
                 cards.map((item, index) => (
                     <DescribCard item={item}
