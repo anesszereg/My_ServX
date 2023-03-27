@@ -1,28 +1,42 @@
 import { BiMenuAltRight } from "react-icons/bi";
 import {BsFillTelephoneFill} from "react-icons/bs"
-import  {Link} from "react-scroll"
+import  {Link as ScrollLink} from "react-scroll"
+import Link from "next/link";
 const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
   const links = [
-    { title: "home", slug: "/home" },
+    
     { title: "services", slug: "/services" },
     { title: "work", slug: "/work" },
     { title: "blog", slug: "/blog" },
+    
   ];
   // now u made the links u can replicate them
   return (
-    <div className="w-full max-w-3xl flex  h-full">
+    <div className="w-full max-w-3xl flex  h-full pr-6">
       <nav className="w-full flex items-center pr-4 h-full">
-        <ul className="w-full intersect gap-x-8 lg:gap-x-16 h-full hidden md:flex items-center">
-          {links.map((item, index) => (
-            // 4px is a custom value h-[custom value]
-            // now for the cool stuff you can add a group class to the parent
-            // then use it to select children and animate them
-            <li key={index} className="h-full  uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-20 relative">
+        <ul className="w-full intersect gap-x-8 lg:mr-10   lg:gap-x-16 h-full hidden md:flex items-center">
+        <li className="h-full  w-full uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-20 relative">
               {/* left and translate to center the bottom gradient */}
               <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
-              <Link className="h-full cursor-pointer w-full grid place-items-center" smooth offset={-80} to={item.slug}>{item.title}</Link>
+              <Link className="h-full cursor-pointer w-full grid place-items-center" smooth offset={-80} href='/Home'>Home</Link>
+            </li>
+          {links.map((item, index) => (
+            // 4px is a custom value h-[custom value]
+            // now for the cool stuff you can add a group class to the parent 
+            // then use it to select children and animate them
+            <li key={index} className="h-full  uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-full relative">
+              {/* left and translate to center the bottom gradient */}
+              <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
+              <ScrollLink className="h-full cursor-pointer w-full grid place-items-center" smooth offset={-80} to={item.slug}>{item.title}</ScrollLink>
             </li>
           ))}
+          
+          <li className="h-full  uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-full relative">
+              {/* left and translate to center the bottom gradient */}
+              <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
+              <Link className="h-full cursor-pointer w-16 flex  place-items-center" smooth offset={-100} href='/AgencyPage'>About Us</Link>
+            </li>
+
         </ul>
         <div className="flex items-center justify-end w-full md:w-fit gap-x-8 md:gap-x-0">
           

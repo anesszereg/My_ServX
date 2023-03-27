@@ -27,10 +27,8 @@ export default function Home() {
       <StaticSection/>
       <WorkCategory/>
       <Work />
-      {/* <AboutCompany/> */}
       <MissionVission/>
-      {/* <Philosophy/> */}
-      {/* <DescribSection/> */}
+     
       
       <Technologies />
       <div className="w-full gap-8 max-w-7xl mt-20 mb-5 px-4 md:flex-row flex-col flex items-center justify-center ">
