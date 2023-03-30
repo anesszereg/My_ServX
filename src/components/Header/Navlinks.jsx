@@ -12,13 +12,13 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
   ];
   // now u made the links u can replicate them
   return (
-    <div className="w-full max-w-3xl flex  h-full pr-6">
-      <nav className="w-full flex items-center pr-4 h-full">
+    <div className="w-full max-w-3xl flex  h-full   lg:pr-6">
+      <nav className="w-full flex items-center lg:pr-4 h-full">
         <ul className="w-full intersect gap-x-8 lg:mr-10   lg:gap-x-16 h-full hidden md:flex items-center">
         <li className="h-full  w-full uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-20 relative">
               {/* left and translate to center the bottom gradient */}
               <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
-              <Link className="h-full cursor-pointer w-full grid place-items-center" smooth offset={-80} href='/Home'>Home</Link>
+              <Link className="h-full cursor-pointer w-full grid place-items-center" smooth={true} offset={-80} href='/Home'>Home</Link>
             </li>
           {links.map((item, index) => (
             // 4px is a custom value h-[custom value]
@@ -34,7 +34,7 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
           <li className="h-full  uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-full relative">
               {/* left and translate to center the bottom gradient */}
               <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
-              <Link className="h-full cursor-pointer w-16 flex  place-items-center" smooth offset={-100} href='/AgencyPage'>About Us</Link>
+              <Link className="h-full cursor-pointer w-24 flex  items-center" smooth offset={-100} href='/AgencyPage'>About Us</Link>
             </li>
 
         </ul>
