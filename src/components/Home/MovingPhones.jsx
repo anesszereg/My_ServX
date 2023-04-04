@@ -13,7 +13,7 @@ const MovingPhones = () => {
     <div className="absolute right-0 z-[1] overflow-x-hidden overflow-y-hidden  flex items-end  justify-end w-[100vw] h-full mt-24  top-0 ">
       {/* faire des telephones qui bougent  */}
         
-      <div className=" imageContainer w-full overflow-x-hidden mt-[300px] mr-[-100px] overflow-y-hidden  grid grid-flow-col grid-rows-2 Items-center justify-end justify-items-end align-content-center  h-full">
+      <div className=" imageContainer w-full overflow-x-hidden mt-[300px] pr-[-100px] overflow-y-hidden  grid grid-flow-col grid-rows-2 Items-center justify-end justify-items-end align-content-center  h-full">
         {images.map(
           (img, index) =>
             index <= 6 && (
