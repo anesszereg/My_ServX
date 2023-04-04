@@ -40,7 +40,7 @@ const NavBar = () => {
 
   return (
     // giving it a height of h-28 to keep the size fixed
-    <header className={`    ${scrollPosition > 0 ? 'bg-white  shadow-md ' : 'bg-transparent'} transition-colors duration-[1s] ease-in-out    px-8 z-[3] flex w-full fixed   h-20`}>
+    <header className={`    ${scrollPosition > 0 ? 'bg-white  shadow-md ' : 'bg-transparent'} transition-colors duration-[1s] ease-in-out  top-0  px-8 z-[3] flex w-full fixed   h-20`}>
       <div className="w-full flex max-h-20 h-full md:px-0 px-4 items-start  md:items-center justify-between ">
         {/* object contain scales down the image so its all seen , object center centers it */}
         <Link className="flex-grow " href={"/"} legacyBehavior>
