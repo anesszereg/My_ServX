@@ -25,7 +25,7 @@ const Sidebar = ({visible, setVisible, activeNav, setActiveNav}) => {
             <div className={
                 `top-0 w-full max-w-xl transition-all ease-in-out duration-500 ${
                     visible || activeNav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-                } right-0    bg-gray-50  mr-10 sm:px-20 text-white absolute h-full`
+                } right-0    bg-gray-50   sm:px-20 text-white absolute h-full`
             }>
                 <button type="button"
                     onClick={

@@ -1,11 +1,18 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { NavBar,Footer,HeroSection,Work,ServicesSection ,AboutUs, StaticSection ,Technologies, WorkCategory, MissionVission, Philosophy, AboutCompany, DescribSection} from "../components";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // const router = useRouter();
+  
+  // useEffect(() => {
+  //   router.replace('/');
+  // }, []);
   return (
-    <div className="overflow-x-hidden flex items-center flex-col ">
+    <section  className="overflow-x-hidden flex items-center flex-col ">
       <Head>
         <title>MyServX</title>
   
@@ -29,7 +36,7 @@ export default function Home() {
       <Work />
       <MissionVission/>
      
-      
+    
       <Technologies />
       <div className="w-full gap-8 max-w-7xl mt-20 mb-5 px-4 md:flex-row flex-col flex items-center justify-center ">
         <h3 className="text-4xl text-center font-bold text-slate-700">Votre Idée, Une réalité</h3>
@@ -40,6 +47,6 @@ export default function Home() {
       </div>
       
       <Footer />
-    </div>
+    </section>
   );
 }

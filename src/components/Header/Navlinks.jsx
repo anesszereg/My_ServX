@@ -18,7 +18,7 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
         <li className="h-full  w-full uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-20 relative">
               {/* left and translate to center the bottom gradient */}
               <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
-              <Link className="h-full cursor-pointer w-full grid place-items-center" smooth={true} offset={-80} href='/Home'>Home</Link>
+              <Link className="h-full cursor-pointer w-full grid place-items-center" smooth={true} offset={-80} href='/'>Home</Link>
             </li>
           {links.map((item, index) => (
             // 4px is a custom value h-[custom value]

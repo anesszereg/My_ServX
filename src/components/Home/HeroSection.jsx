@@ -38,7 +38,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section name="/home" className="h-[70rem] 2xl:h-[50rem] relative h-screen w-full px-8 pt-28 md:pt-40">
+    <section name="/home" className="h-[70rem] 2xl:h-[50rem] relative overflow-hidden h-screen w-full px-8 pt-28 md:pt-40">
       <div
         ref={text}
         className="flex relative z-[2] items-center lg:items-start gap-y-16 leading-loose font-bold flex-col"
