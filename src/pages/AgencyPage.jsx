@@ -1,4 +1,4 @@
-import { AboutCompany, DescribSection, Footer, NavBar, Philosophy } from '@/components'
+import { AboutCompany, Cursor, DescribSection, Footer, NavBar, Philosophy } from '@/components'
 import React from 'react'
 
 function HomePage() {
@@ -17,6 +17,9 @@ function HomePage() {
       </div>
       
       <Footer/>
+      <div  className="ball top-0 right-0 bottom-0  z-50 left-0    absolute bg-gradient-to-r from-[#ffbd84] to-[#ff1f8e] w-4 rounded-2xl">
+       
+       </div>
     
     </section>
   )
