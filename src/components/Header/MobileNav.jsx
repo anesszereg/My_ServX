@@ -12,7 +12,7 @@ const MobileNav = ({ handleClick, activeNav, visible }) => {
   ];
 
   return (
-    <nav className={`w-full ${activeNav  ? "flex" : " hidden"} relative py-8  flex-col  h-full`}>
+    <nav className={`w-full ${activeNav  ? "flex" : " hidden"}  py-8  flex-col  h-full`}>
       <ul className=" pt-20  flex flex-col gap-y-8">
         {links.map((item, index) => (
           // 4px is a custom value h-[custom value]
