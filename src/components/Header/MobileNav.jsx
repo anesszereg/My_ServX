@@ -5,10 +5,12 @@ import { AiOutlineHome } from "react-icons/ai";
 
 const MobileNav = ({ handleClick, activeNav, visible }) => {
   const links = [
-    { title: "about", slug: "/about", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "contact", slug: "/contact", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "work", slug: "/work", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "stuff", slug: "/stuff", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "home", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "services", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "work", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "about", slug: "/AgencyPage", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "blog", slug: "/blog", icon: <AiOutlineHome className="text-2xl" /> }
+
   ];
 
   return (
@@ -24,7 +26,7 @@ const MobileNav = ({ handleClick, activeNav, visible }) => {
           >
             {/* left and translate to center the bottom gradient */}
             <div className="absolute  opacity-100  transition-all ease-in-out duration-500 w-full h-[2px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
-            <Link className="h-full w-full flex items-center justify-between" href={item.slug}>
+            <Link className="h-full w-full flex items-center justify-between" href={item.slug} >
               {item.title}
               {item.icon}
             </Link>
