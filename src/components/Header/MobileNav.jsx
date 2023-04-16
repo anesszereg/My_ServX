@@ -18,8 +18,8 @@ const MobileNav = ({ handleClick, activeNav ,visible }) => {
  
 
   return (
-    <nav className={`w-full ${activeNav  ? "flex" : " hidden"}  py-8  flex-col gap-16 h-full`}>
-      <ul className=" pt-20  flex flex-col  intersect gap-y-8">
+    <nav className={`w-full ${activeNav  ? "flex" : " hidden"}  py-8  items-center flex-col gap-16 h-full`}>
+      <ul className=" pt-20  flex flex-col w-10/12  intersect gap-y-8">
         {links.map((item, index) => (
           // 4px is a custom value h-[custom value]
           // now for the cool stuff you can add a group class to the parent
