@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
+import  {Link as ScrollLink} from "react-scroll"
 
-const MobileNav = ({ handleClick, activeNav, visible }) => {
+const MobileNav = ({ handleClick, activeNav ,visible }) => {
+  // const [activeNav, setActiveNav] = useState(true)
   const links = [
     { title: "home", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "services", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "work", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "services", slug: "/services", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "work", slug: "/work", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "blog", slug: "/blog", icon: <AiOutlineHome className="text-2xl" /> },
     { title: "about", slug: "/AgencyPage", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "blog", slug: "/blog", icon: <AiOutlineHome className="text-2xl" /> }
 
   ];
+  
+ 
 
   return (
-    <nav className={`w-full ${activeNav  ? "flex" : " hidden"}  py-8  flex-col  h-full`}>
-      <ul className=" pt-20  flex flex-col gap-y-8">
+    <nav className={`w-full ${activeNav  ? "flex" : " hidden"}  py-8  flex-col gap-16 h-full`}>
+      <ul className=" pt-20  flex flex-col  intersect gap-y-8">
         {links.map((item, index) => (
           // 4px is a custom value h-[custom value]
           // now for the cool stuff you can add a group class to the parent
@@ -26,14 +30,16 @@ const MobileNav = ({ handleClick, activeNav, visible }) => {
           >
             {/* left and translate to center the bottom gradient */}
             <div className="absolute  opacity-100  transition-all ease-in-out duration-500 w-full h-[2px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
-            <Link className="h-full w-full flex items-center justify-between" href={item.slug} >
+            <ScrollLink
+                          onClick={() => handleClick(true)}
+            className="h-full w-full flex items-center justify-between" smooth={true} offset={-80} to={item.slug} >
               {item.title}
               {item.icon}
-            </Link>
+            </ScrollLink>
           </li>
         ))}
       </ul>
-      <div className="mt-8 bottom-8 absolute w-full flex items-center justify-center">
+      <div className="mt-8 bottom-8  w-full flex items-center justify-center">
         <button
           onClick={() => handleClick()}
           type="button"

@@ -49,7 +49,7 @@ const NavBar = () => {
           </div>
         </Link>
 
-        <Navlinks setActiveNav={setActiveNav} activeNav={activeNav} setVisible={setVisible} visible={visible} />
+        <Navlinks  setActiveNav={setActiveNav} activeNav={activeNav} setVisible={setVisible} visible={visible} />
       </div>
       {/* the phone nav */}
       {/* the form */}

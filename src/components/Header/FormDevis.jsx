@@ -18,7 +18,7 @@ const FormDevis = ({ visible, activeNav }) => {
       .then((res) => setLoading(res.message));
   };
   return (
-    <div className={`${visible ? "block" : " hidden"}    `}>
+    <div className={`${visible ? "block" : " hidden"}  mt-10 p-10   `}>
       <h2 className="text-3xl font-bold pt-4 pb-10  text-gray-800 relative">Nous contacter par &eacute;crit</h2>
       <form
         onSubmit={handleSubmit(Submit)}
