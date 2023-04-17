@@ -7,11 +7,11 @@ import  {Link as ScrollLink} from "react-scroll"
 const MobileNav = ({ handleClick, activeNav ,visible }) => {
   // const [activeNav, setActiveNav] = useState(true)
   const links = [
-    { title: "home", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
+    // { title: "home", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
     { title: "services", slug: "/services", icon: <AiOutlineHome className="text-2xl" /> },
     { title: "work", slug: "/work", icon: <AiOutlineHome className="text-2xl" /> },
     { title: "blog", slug: "/blog", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "about", slug: "/AgencyPage", icon: <AiOutlineHome className="text-2xl" /> },
+    // { title: "about", slug: "/AgencyPage", icon: <AiOutlineHome className="text-2xl" /> },
 
   ];
   
@@ -20,6 +20,20 @@ const MobileNav = ({ handleClick, activeNav ,visible }) => {
   return (
     <nav className={`w-full ${activeNav  ? "flex" : " hidden"}  py-8  items-center flex-col gap-16 h-full`}>
       <ul className=" pt-20  flex flex-col w-10/12  intersect gap-y-8">
+      <li
+            
+            className="h-12 uppercase group font-medium tracking-wider grid  text-gray-800 w-full relative"
+          >
+            {/* left and translate to center the bottom gradient */}
+            <div className="absolute  opacity-100  transition-all ease-in-out duration-500 w-full h-[2px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
+            <Link
+                          onClick={() => handleClick(true)}
+            className="h-full w-full flex items-center justify-between" smooth={true} offset={-80} href='/' >
+              Home
+              <AiOutlineHome className="text-2xl" />
+              
+            </Link>
+          </li>
         {links.map((item, index) => (
           // 4px is a custom value h-[custom value]
           // now for the cool stuff you can add a group class to the parent
@@ -38,6 +52,20 @@ const MobileNav = ({ handleClick, activeNav ,visible }) => {
             </ScrollLink>
           </li>
         ))}
+          <li
+            
+            className="h-12 uppercase group font-medium tracking-wider grid  text-gray-800 w-full relative"
+          >
+            {/* left and translate to center the bottom gradient */}
+            <div className="absolute  opacity-100  transition-all ease-in-out duration-500 w-full h-[2px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
+            <Link
+                          onClick={() => handleClick(true)}
+            className="h-full w-full flex items-center justify-between" smooth={true} offset={-80} href='/AgencyPage' >
+              about
+              <AiOutlineHome className="text-2xl" />
+              
+            </Link>
+          </li>
       </ul>
       <div className="mt-8 bottom-8  w-full flex items-center justify-center">
         <button
