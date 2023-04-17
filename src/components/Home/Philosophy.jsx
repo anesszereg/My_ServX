@@ -33,18 +33,19 @@ function Philosophy() {
     const content = [
         {
             title: 'SUPERVISION',
-            subTitle: 'Leadership',
-            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+            subTitle: "L'excellence technique",
+            text: "Nous sommes passionnés par la technologie et nous nous engageons à rester à la pointe de l'innovation. Nous nous efforçons de fournir des solutions web de qualité supérieure en utilisant les technologies les plus avancées et les meilleures pratiques du secteur.",
             url: '/assets/philo/leadership.jpg'
         }, {
-            title: 'STRENGTH',
+            title: 'NOTRE FORCE',
             subTitle: 'Team Collaboration',
-            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+            text: 'Nous croyons que la collaboration est essentielle pour atteindre des résultats exceptionnels. Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins, leurs objectifs et leurs attentes, afin de leur fournir des solutions web sur mesure qui répondent parfaitement à leurs exigences.',
             url: '/assets/philo/collaboration.jpg'
         }, {
-            title: 'QUALITY',
-            subTitle: 'Transparency & Integrity',
-            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+            title: 'QUALITÈ',
+            subTitle: 'Transparence & Integrité',
+            text: 'Nous considérons que la transparence est essentielle pour maintenir une relation saine et productive avec nos clients, et nous nous engageons à fournir des informations claires et précises à nos clients sur chaque aspect de leur projet de site web.',
+            text2: "Nous sommes fiers de notre réputation en matière d'intégrité et de transparence, et nous continuerons à travailler dur pour maintenir la confiance et la fidélité de nos clients.",
             url: '/assets/philo/transparency.jpg'
         },
 
@@ -53,8 +54,8 @@ function Philosophy() {
     return (
         <div className='flex flex-col items-center justify-center py-28 px-6  lg:px:20 gap-3'>
             <p ref={title} className=' translate-y-4 opacity-0  text-work text-center  font-normal text-lg'>
-                OUR PHILOSOPHY</p>
-            <p ref={subtitle} className=' translate-y-4 opacity-0  text-work-card leading-tight text-center font-bold lg:text-5xl  text-4xl mb-10'>Our Business Philosophy</p>
+                NOTRE PHILOSOPHIE</p>
+            <p ref={subtitle} className=' translate-y-4 opacity-0  text-work-card leading-tight text-center font-bold lg:text-5xl  text-4xl mb-10'>NOTRE PHILOSOPHIE DE TRAVAIL</p>
 
             <div className="flex justify-center items-center lg:w-3/6  lg:flex-row flex-col  gap-16 w-9/12 h-9/12  mb-10">
                 <div ref={cardContainer} className="flex  lg:h-5/12 lg:w-5/12 h-10/12 w-10/12 translate-y-4 opacity-0  ">
@@ -133,6 +134,10 @@ function Philosophy() {
                     <p className='text-text-blog  text-lg  '>
                         {
                         content[2].text
+                    }</p>
+                    <p className='text-text-blog  text-lg  '>
+                        {
+                        content[2].text2
                     }</p>
 
                 </div>

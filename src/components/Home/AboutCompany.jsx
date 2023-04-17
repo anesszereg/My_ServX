@@ -40,29 +40,27 @@ function AboutCompany() {
                     />
             </div>
             <div className="flex flex-col lg:items-start items-center gap-4 lg:w-2/6 lg:h-2/6">
-                <p ref={title} className='text-work  opacity-0 translate-y-4  font-normal text-lg'>
-                    ABOUT US
-                </p>
-                <p ref={subtitle} className='text-work-card leading-tight  font-bold lg:text-5xl text-[28px] mb-3 opacity-0 translate-y-4 '>ABOUT AGENCY</p>
+                 {<p ref={title} className='text-work  opacity-0 translate-y-4  font-normal text-lg'>
+                 &Agrave; PROPOS DE NOUS
+                </p> }
+                <p ref={subtitle} className='text-work-card leading-tight  font-bold lg:text-5xl text-[28px] mb-3 opacity-0 translate-y-4 '>&Agrave; PROPOS DE L&apos;AGENCE</p>
                 <p ref={text} className='text-text-blog  text-lg w-11/12 opacity-0 translate-y-4 '>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat autem porro quasi cumque possimus. Modi similique animi beatae quo, libero ipsa officia deserunt velit neque tempore eveniet dolore perspiciatis veritatis!
-                </p>
+                Faites la connaissance de <span className="font-bold"> Yacine </span>  et <span className="font-bold"> Camil </span>, deux ingénieurs passionnés par la création de sites web professionnels et sécurisés. <span className="font-bold"> Yacine </span> est un expert en développement web tandis que <span className="font-bold"> Camil </span> est un ingénieur en cybersécurité. Ensemble, ils ont fondé une agence web qui allie leur expertise technique à une forte orientation client.                </p>
                 <p ref={text2} className='text-text-blog  text-lg w-11/12 opacity-0 translate-y-4  '>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat autem porro quasi cumque possimus. Modi similique animi beatae quo, libero ipsa officia deserunt velit neque tempore eveniet dolore perspiciatis veritatis!
-                </p>
+                Chez notre agence web, nous croyons que chaque entreprise, organisation ou particulier mérite un site web qui reflète leur identité unique et répond à leurs besoins spécifiques. Nous sommes déterminés à offrir des services exceptionnels à chaque client, en portant une attention particulière à la sécurité en ligne.                </p>
 
                 <div className="flex justify-between items-center w-10/12 flex-col md:flex-row lg:flex-row mt-6">
                         <div className="flex flex-col">
-                            <p className='font-bold text-blog1 text-4xl '><CountUp end={450} duration={4} /> </p>
-                            <p ref={text3} className='text-text-blog opacity-0 translate-y-4   text-lg'>Happy client</p>
+                            <p className='font-bold text-blog1 text-4xl '><CountUp end={5} duration={1} /> </p>
+                            <p ref={text3} className='text-text-blog opacity-0 translate-y-4   text-lg'>Clients Satisfaits</p>
                         </div>
                         <div className="flex flex-col">
-                            <p className='font-bold text-blog1 text-4xl '><CountUp end={95} duration={4} /> k</p>
-                            <p ref={text4} className='text-text-blog opacity-0 translate-y-4   text-lg'>Hours Worked </p>
+                            <p className='font-bold text-blog1 text-4xl '><CountUp end={525} duration={4} />{ /*k*/}</p>
+                            <p ref={text4} className='text-text-blog opacity-0 translate-y-4   text-lg'>Heures Travaill&eacute;es </p>
                         </div>
                         <div className="flex flex-col">
-                            <p className='font-bold text-blog1 text-4xl '><CountUp end={850} duration={4} /> </p>
-                            <p ref={text5} className='text-text-blog opacity-0 translate-y-4   text-lg'>Project Done</p>
+                            <p className='font-bold text-blog1 text-4xl '><CountUp end={6} duration={1} /> </p>
+                            <p ref={text5} className='text-text-blog opacity-0 translate-y-4   text-lg'>Projets R&eacute;alis&eacute;s</p>
                         </div>
                 </div>
 
