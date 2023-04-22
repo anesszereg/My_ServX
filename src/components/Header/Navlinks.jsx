@@ -5,9 +5,9 @@ import Link from "next/link";
 const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
   const links = [
     
-    { title: "services", slug: "/services" },
-    { title: "work", slug: "/work" },
-    { title: "blog", slug: "/blog" },
+    { title: "services", slug: "/#services" },
+    { title: "work", slug: "/#work" },
+    { title: "blog", slug: "/#blog" },
     
   ];
   // now u made the links u can replicate them
@@ -27,7 +27,7 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
             <li key={index} className="h-full  uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-full relative">
               {/* left and translate to center the bottom gradient */}
               <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
-              <ScrollLink className="h-full cursor-pointer w-full grid place-items-center" smooth offset={-80} to={item.slug}>{item.title}</ScrollLink>
+              <Link className="h-full cursor-pointer w-full grid place-items-center"  href={item.slug}>{item.title}</Link>
             </li>
           ))}
           

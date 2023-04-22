@@ -5,13 +5,12 @@ import { AiOutlineHome } from "react-icons/ai";
 import  {Link as ScrollLink} from "react-scroll"
 
 const MobileNav = ({ handleClick, activeNav ,visible }) => {
-  // const [activeNav, setActiveNav] = useState(true)
+
+  
   const links = [
-    // { title: "home", slug: "/", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "services", slug: "/services", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "work", slug: "/work", icon: <AiOutlineHome className="text-2xl" /> },
-    { title: "blog", slug: "/blog", icon: <AiOutlineHome className="text-2xl" /> },
-    // { title: "about", slug: "/AgencyPage", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "services", slug: "/#services", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "work", slug: "/#work", icon: <AiOutlineHome className="text-2xl" /> },
+    { title: "blog", slug: "/#blog", icon: <AiOutlineHome className="text-2xl" /> },
 
   ];
   
@@ -44,12 +43,12 @@ const MobileNav = ({ handleClick, activeNav ,visible }) => {
           >
             {/* left and translate to center the bottom gradient */}
             <div className="absolute  opacity-100  transition-all ease-in-out duration-500 w-full h-[2px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
-            <ScrollLink
+            <Link
                           onClick={() => handleClick(true)}
-            className="h-full w-full flex items-center justify-between" smooth={true} offset={-80} to={item.slug} >
+            className="h-full w-full flex items-center justify-between"  href={item.slug} >
               {item.title}
               {item.icon}
-            </ScrollLink>
+            </Link>
           </li>
         ))}
           <li

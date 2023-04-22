@@ -56,7 +56,7 @@ const Technologies = () => {
     },
   ];
   return (
-    <section name="/blog" className=" w-full pb-16  sm:px-8 pt-28">
+    <section id="blog" className=" w-full pb-16  sm:px-8 pt-28">
       <div className="h-full w-full gap-y-6 flex flex-col items-center">
         <p
           ref={subtitle}

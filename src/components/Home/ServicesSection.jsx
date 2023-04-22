@@ -240,7 +240,7 @@ const ServicesSection = () => {
   ];
   return (
     // outer most container
-    <section name="/services" className=" w-full px-8 py-16 ">
+    <section id="services" className=" w-full px-8 py-16 ">
       <div className="h-full w-full overflow-hidden flex flex-col items-center gap-y-2 ">
         <p ref={subtitle} className="text-xl translate-y-4 opacity-0 bg-gradient-to-r font-medium text-transparent from-purple-600 to-blue-600 bg-clip-text ">
           SERVICES POPULAIRES
