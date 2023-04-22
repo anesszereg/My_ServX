@@ -32,13 +32,13 @@ function DescribSection() {
 
     const cards = [
         {
-            title: 'Reasearch and Analysis',
+            title: 'Èxperience en Cybersécurité',
             text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             svg: (
                 <svg id="flat" height="80" viewBox="0 0 550 550" width="90" xmlns="http://www.w3.org/2000/svg"><path d="m120 112a24 24 0 0 0 -24 24v112l56 16 88-40 24-72-16-40z" fill="#7dafff"/><path d="m192 160h64v16h-64z" fill="#548aff"/><path d="m128 160h48v16h-48z" fill="#548aff"/><path d="m128 200h112v16h-112z" fill="#548aff"/><path d="m408 169.93994v294.06006a24.00619 24.00619 0 0 1 -24 24h-240a24.00619 24.00619 0 0 1 -24-24v-200l128-32v-152h70.06006a24.04835 24.04835 0 0 1 16.97021 7.03l65.93946 65.94a24.0487 24.0487 0 0 1 7.03027 16.96994z" fill="#548aff"/><g fill="#486be0"><path d="m160 416h80v16h-80z"/><path d="m256 416h56v16h-56z"/><path d="m328 416h48v16h-48z"/><path d="m160 368h24v16h-24z"/><path d="m200 368h80v16h-80z"/><path d="m160 320h64v16h-64z"/><path d="m240 320h64v16h-64z"/><path d="m352 240h16v16h-16z"/><path d="m264 240h72v16h-72z"/><path d="m320 192h48v16h-48z"/><path d="m256 192h48v16h-48z"/><path d="m296 368h56v16h-56z"/></g><path d="m231.201 232.615h39.598v36.77h-39.598z" fill="#f78e00" transform="matrix(.707 -.707 .707 .707 -103.968 251)"/><path d="m253.619 258.927h45.255v34.639h-45.255z" fill="#ffb401" transform="matrix(.707 -.707 .707 .707 -114.425 276.247)"/><path d="m334.059 254.863h67.882v226.274h-67.882z" fill="#ffc431" transform="matrix(.707 -.707 .707 .707 -152.431 368)"/><path d="m424 472 6.05888 6.05888a33.9411 33.9411 0 0 0 24 9.94112h.00005a33.94109 33.94109 0 0 0 33.94107-33.94109v-.00005a33.9411 33.9411 0 0 0 -9.94112-24l-6.05888-6.05886z" fill="#ffb401"/><path d="m152 24a128 128 0 1 0 128 128 128.00009 128.00009 0 0 0 -128-128zm0 224a96 96 0 1 1 96-96 96.00006 96.00006 0 0 1 -96 96z" fill="#ffc431"/><path d="m405.83984 160h-61.83984a15.99571 15.99571 0 0 1 -16-16v-61.84009a23.90368 23.90368 0 0 1 7.03027 4.87009l65.93946 65.94a23.8878 23.8878 0 0 1 4.87011 7.03z" fill="#7dafff"/></svg>
             )
         }, {
-            title: 'Negotiation and power',
+            title: 'Service complet & personnalisé ',
             text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
 
             svg: (
@@ -46,7 +46,7 @@ function DescribSection() {
 
             )
         }, {
-            title: 'Creative and innovative solutions',
+            title: 'Creativité & solutions innovantes ',
             text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
 
             svg: (
@@ -55,8 +55,8 @@ function DescribSection() {
 
             )
         }, {
-            title: 'Trasparency and ease of work',
-            text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+            title: 'Trasparence & Facilité de travail',
+            text: 'Nous serons totalement transparent pour une confiance absolue et nous rendons le travail facile',
             svg: (
                 <svg id="flat" height="70" viewBox="0 0 550 550" width="70" xmlns="http://www.w3.org/2000/svg"><path d="m120 112a24 24 0 0 0 -24 24v112l56 16 88-40 24-72-16-40z" fill="#7dafff"/><path d="m192 160h64v16h-64z" fill="#548aff"/><path d="m128 160h48v16h-48z" fill="#548aff"/><path d="m128 200h112v16h-112z" fill="#548aff"/><path d="m408 169.93994v294.06006a24.00619 24.00619 0 0 1 -24 24h-240a24.00619 24.00619 0 0 1 -24-24v-200l128-32v-152h70.06006a24.04835 24.04835 0 0 1 16.97021 7.03l65.93946 65.94a24.0487 24.0487 0 0 1 7.03027 16.96994z" fill="#548aff"/><g fill="#486be0"><path d="m160 416h80v16h-80z"/><path d="m256 416h56v16h-56z"/><path d="m328 416h48v16h-48z"/><path d="m160 368h24v16h-24z"/><path d="m200 368h80v16h-80z"/><path d="m160 320h64v16h-64z"/><path d="m240 320h64v16h-64z"/><path d="m352 240h16v16h-16z"/><path d="m264 240h72v16h-72z"/><path d="m320 192h48v16h-48z"/><path d="m256 192h48v16h-48z"/><path d="m296 368h56v16h-56z"/></g><path d="m231.201 232.615h39.598v36.77h-39.598z" fill="#f78e00" transform="matrix(.707 -.707 .707 .707 -103.968 251)"/><path d="m253.619 258.927h45.255v34.639h-45.255z" fill="#ffb401" transform="matrix(.707 -.707 .707 .707 -114.425 276.247)"/><path d="m334.059 254.863h67.882v226.274h-67.882z" fill="#ffc431" transform="matrix(.707 -.707 .707 .707 -152.431 368)"/><path d="m424 472 6.05888 6.05888a33.9411 33.9411 0 0 0 24 9.94112h.00005a33.94109 33.94109 0 0 0 33.94107-33.94109v-.00005a33.9411 33.9411 0 0 0 -9.94112-24l-6.05888-6.05886z" fill="#ffb401"/><path d="m152 24a128 128 0 1 0 128 128 128.00009 128.00009 0 0 0 -128-128zm0 224a96 96 0 1 1 96-96 96.00006 96.00006 0 0 1 -96 96z" fill="#ffc431"/><path d="m405.83984 160h-61.83984a15.99571 15.99571 0 0 1 -16-16v-61.84009a23.90368 23.90368 0 0 1 7.03027 4.87009l65.93946 65.94a23.8878 23.8878 0 0 1 4.87011 7.03z" fill="#7dafff"/></svg>
             )
@@ -66,9 +66,9 @@ function DescribSection() {
 
     return (
         <div className=" flex flex-col justify-center items-center gap-4     py-24 px-16 h-full w-full bg-describe ">
-            <p ref={subtitle} className='text-work   translate-y-4 opacity-0 font-normal text-lg'>WE ARE AWESOME</p>
+            <p ref={subtitle} className='text-work   translate-y-4 opacity-0 font-normal text-lg'>NOUS SOMMES EXCEPTIONNELS</p>
             <p ref={title} className='text-work-card translate-y-16 opacity-0   leading-tight  font-bold lg:text-5xl text-[28px] mb-3'>
-                Why Choose ServX
+                Pourquoi Choisir MyServX ?
             </p>
             <div ref={cardContainer} className="lg:flex grid  lg:flex-wrap md:grid-cols-2 md:grid-rows-2 gap-6 ">
                 {
