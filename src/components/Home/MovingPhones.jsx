@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const MovingPhones = () => {
   const images = [
-    { url: "/assets/tablet2.webp", main: false, slow: false, small: true, top: "mt-[300px]" ,right:'mr-[-150px]'},
-    { url: "/assets/tablet.webp", main: false, slow: false, small: false, top: "mt-[50px]" ,right:'mr-[-330px]' },
-    { url: "/assets/laptop.webp", main: true, slow: true, small: false, top: "",right:'mr-[30px]' },
+    { url: "/assets/phone.png", main: false, slow: false, small: true, top: "mt-[300px]" ,right:'mr-[-100px]'},
+    { url: "/assets/laptop.webp", main: false, slow: false, small: false, top: "mt-[50px]" ,right:'mr-[-330px]' },
+    { url: "/assets/laptop2.png", main: true, slow: true, small: false, top: "",right:'mr-[30px]' },
     { url: "/assets/tablet.webp", main: true, slow: true, small: false, top: "mt-[-170px]",right:'mr-[-110px]' },
-    { url: "/assets/tablet2.webp", main: false, slow: false, small: true, top: "" },
-    { url: "/assets/tablet3.webp", main: false, slow: true, small: true,top: "mt-[-170px]",right:'mr-[-50px]' },
+    { url: "/assets/tablet3.webp", main: false, slow: true, small: true, top: "" },
+    { url: "/assets/tablet2.webp", main: false, slow: false, small: true,top: "mt-[-170px]",right:'mr-[-50px]' },
   ];
   return (
     <div className="absolute right-0 z-[1] overflow-x-hidden overflow-y-hidden  flex items-end  justify-end w-[100vw] h-full mt-24  top-0 ">

@@ -41,6 +41,9 @@
   background-image: url('../../public/assets/Work-categoy/tt-work-bg.jpg');
 
 }
+.bgImage{
+  background-image: url('../../public/assets/ScrollSection/client-bg.png');
+}
 .bg_about_company{
   background-image: url('../../public/assets/about/dot_bg.png');
   background-repeat: repeat;

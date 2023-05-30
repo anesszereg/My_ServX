@@ -12,7 +12,7 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
   ];
   // now u made the links u can replicate them
   return (
-    <div className="w-full max-w-3xl flex  h-full   lg:pr-6">
+    <div className="w-full max-w-4xl flex  h-full   lg:pr-6">
       <nav className="w-full flex items-center lg:pr-4 h-full">
         <ul className="w-full intersect gap-x-8 lg:mr-10   lg:gap-x-16 h-full hidden md:flex items-center">
         <li className="h-full  w-full uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-20 relative">
@@ -36,9 +36,14 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
               <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
               <Link className="h-full cursor-pointer w-24 flex  items-center" smooth offset={-100} href='/AgencyPage'>L&apos;agence</Link>
             </li>
+          <li className="h-full  uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-full relative">
+              {/* left and translate to center the bottom gradient */}
+              <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
+              <Link className="h-full cursor-pointer w-24 flex  items-center" smooth offset={-100} href='/ProjectPage'>Project</Link>
+            </li>
 
         </ul>
-        <div className="flex items-center justify-end w-full md:w-fit gap-x-8 md:gap-x-0">
+        <div className="flex items-center  w-full md:w-fit  md:gap-x-0">
           
           <button onClick={()=>{setActiveNav(!activeNav); setVisible(false)}} type="button" className="block md:hidden">
             <BiMenuAltRight className="text-4xl   text-slate-800" />
