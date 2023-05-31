@@ -44,6 +44,9 @@
 .bgImage{
   background-image: url('../../public/assets/ScrollSection/client-bg.png');
 }
+.hero_image{
+  background-image: url('../../public/assets/brook-landing-new-slider-slide-bg.jpg');
+}
 .bg_about_company{
   background-image: url('../../public/assets/about/dot_bg.png');
   background-repeat: repeat;

@@ -13,6 +13,7 @@ function AboutProject() {
 
     gsap.registerPlugin(ScrollTrigger);
     const subtitle = useRef();
+    const big_title = useRef();
     const title = useRef();
     const text = useRef();
     const text2 = useRef();
@@ -20,12 +21,14 @@ function AboutProject() {
     const text4 = useRef();
     const text5 = useRef();
     const cardContainer = useRef();
-    const big_title = useRef();
+    const icon_1 = useRef();
+    const icon_2= useRef();
+    const icon_3 = useRef();
     useEffect(() => {
         gsap.to(subtitle.current, {
             y: 0,
             delay: 0.2,
-            opacity: 1,
+            opacity:1,
             duration: 1,
             ease: Power3.easeOut,
             scrollTrigger: subtitle.current
@@ -94,19 +97,41 @@ function AboutProject() {
             ease: Power3.easeOut,
             scrollTrigger: cardContainer.current
         })
+        gsap.to(icon_1.current, {
+            y: 0,
+            delay: 0.2,
+            opacity: 1,
+            duration: 1,
+            ease: Power3.easeOut,
+            scrollTrigger: icon_1.current
+        })
+        gsap.to(icon_2.current, {
+            y: 0,
+            delay: 0.2,
+            opacity: 1,
+            duration: 1,
+            ease: Power3.easeOut,
+            scrollTrigger: icon_2.current
+        })
+        gsap.to(icon_3.current, {
+            y: 1,
+            delay: 0.2,
+            opacity: 1,
+            duration: 1,
+            ease: Power3.easeOut,
+            scrollTrigger: icon_3.current
+        })
     }, [])
 
 
     return (
         <div className="bg_about_company flex flex-col justify-center items-center h-full w-full py-28 px-16 gap-10  mb-10 ">
-             <p ref = {
-                    big_title
-                }
-                className = 'text-work  opacity-1 translate-y-1  font-bold text-5xl' > OUR PROJECT </p>
+             <p ref={big_title}
+                className = 'text-work  opacity-0 translate-y-1  font-bold text-5xl' > OUR PROJECT </p>
                 <div className="bg_about_company flex  lg:flex-row flex-col  justify-center items-center h-full w-full py-28 px-16 gap-10  mb-10 ">
 
                
-            <div className="flex  opacity-1 translate-y-4  lg:w-2/6 w-11/12 mb-5 "
+            <div className="flex  opacity-0 translate-y-4  lg:w-2/6 w-11/12 mb-5 "
                 ref={cardContainer}>
                 <Image src='/assets/Case/app-intro.png'
                     width={450}
@@ -118,12 +143,12 @@ function AboutProject() {
                 <p ref = {
                     title
                 }
-                className = 'text-work  opacity-1 translate-y-4  font-normal text-lg' > ABOUT THE PROJECT </p>
+                className = 'text-work  opacity-0 translate-y-4  font-normal text-lg' > ABOUT THE PROJECT </p>
             }
                 <p ref={subtitle}
-                    className='text-work-card leading-tight  font-bold lg:text-5xl text-[28px] mb-3 opacity-1 translate-y-4 '>On-Demand Food Delivery Application</p>
+                    className='text-work-card leading-tight  font-bold lg:text-5xl text-[28px] mb-3 opacity-0 translate-y-4 '>On-Demand Food Delivery Application</p>
                 <p ref={text}
-                    className='text-text-blog  text-lg w-11/12 opacity-1 translate-y-4 '>
+                    className='text-text-blog  text-lg w-11/12 opacity-0 translate-y-4 '>
                     Faites la connaissance de
                     <span className="font-bold">
                         Yacine
@@ -142,19 +167,19 @@ function AboutProject() {
                     est un ingénieur en cybersécurité. Ensemble, ils ont fondé une agence web qui allie leur expertise technique à une forte orientation client.
                 </p>
                 <p ref={text2}
-                    className='text-text-blog  text-lg w-11/12 opacity-1 translate-y-4  '>
+                    className='text-text-blog  text-lg w-11/12 opacity-0 translate-y-4  '>
                     Chez notre agence web, nous croyons que chaque entreprise, organisation ou particulier mérite un site web qui reflète leur identité unique et répond à leurs besoins spécifiques. Nous sommes déterminés à offrir des services exceptionnels à chaque client, en portant une attention particulière à la sécurité en ligne.
                 </p>
 
-                <div className="flex gap-6 items-center w-10/12 flex-col md:flex-row lg:flex-row mt-6">
+                <div ref={icon_1} className="flex gap-6 opacity-0 translate-y-16 items-center w-10/12 flex-col md:flex-row lg:flex-row mt-6">
                     <div className="shadow-offset-xl w-20 h-20  shadow-inner-xl flex justify-center items-center bg-white rounded-md ">
-                        <Image src={andriod} alt='' width={40} height={40}  />
+                        <Image  src={andriod} alt='' width={40} height={40}  />
                     </div>
-                    <div className="shadow-offset-xl w-20 h-20 shadow-inner-xl flex justify-center items-center bg-white rounded-md ">
-                        <Image src={apple} alt=''  width={40} height={40} />
+                    <div className="shadow-offset-xl w-20  h-20 shadow-inner-xl flex justify-center items-center bg-white rounded-md ">
+                        <Image  src={apple} alt=''  width={40} height={40} />
                     </div>
-                    <div className="shadow-offset-xl w-20 h-20 shadow-inner-xl flex justify-center items-center bg-white rounded-md ">
-                        <Image src={windows} alt=''  width={40} height={40} />
+                    <div className="shadow-offset-xl w-20  h-20 shadow-inner-xl flex justify-center items-center bg-white rounded-md ">
+                        <Image  src={windows} alt=''  width={40} height={40} />
                     </div>
                     
                 </div>

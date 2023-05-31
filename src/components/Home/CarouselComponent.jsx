@@ -1,31 +1,51 @@
-import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
-import image_1 from 'public/assets/Case/restro-app-1.jpg'
-import image_2 from 'public/assets/Case/restro-app-2.jpg'
-import image_3 from 'public/assets/Case/restro-app-3.jpg'
-import image_4 from 'public/assets/Case/restro-app-4.jpg'
-import Image from 'next/image';
+import { useEffect, useState } from "react";
+
+const images = [
+  "/assets/Case/restro-app-1.jpg",
+  "/assets/Case/restro-app-2.jpg",
+  "/assets/Case/restro-app-3.jpg",
+  "/assets/Case/restro-app-4.jpg",
+];
 
 const CarouselComponent = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const displayedImages = [
+    images[(currentIndex - 1 + images.length) % images.length],
+    images[currentIndex],
+    images[(currentIndex + 1) % images.length],
+  ];
+
   return (
-    <Carousel showThumbs={false} showArrows={true} showStatus={false} infiniteLoop={true}>
-      <div>
-        <Image src={image_1} alt="Image 1" width={100} height={100}/>
-      </div>
-      <div>
-        <Image src={image_2} alt="Image 2" width={100} height={200}/>
-      </div>
-      <div>
-        <Image src={image_3} alt="Image 3" width={100} height={200}/>
-      </div>
-      <div>
-        <Image src={image_4} alt="Image 4" width={100} height={200}/>
-      </div>
-      <div>
-        <img src="/path/to/image5.jpg" alt="Image 5" />
-      </div>
-    </Carousel>
+    <div className="flex items-center justify-center w-[390px] h-screen">
+      {displayedImages.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt={`Carousel Image ${index}`}
+          className="w-full h-10/12 object-cover "
+          style={{
+            transform:
+              index === 0
+                ? "translateX(-10%)"
+                : index === 2
+                ? "translateX(10%)"
+                : "none",
+            transition: "transform 0.5s ease-in-out", // Added transition property
+          }}
+        />
+      ))}
+    </div>
   );
 };
 
