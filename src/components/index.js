@@ -21,3 +21,6 @@ export {default as HowWeWork} from './Home/HowWeWork.jsx'
 export {default as CarouselComponent} from './Home/CarouselComponent.jsx'
 export {default as Scroll} from './Home/Scroll.jsx'
 export {default as ScrollSection} from './Home/ScrollSection.jsx'
+export {default as LogoCarousel} from './Home/LogoCarousel.jsx'
+export {default as PortfolioSection} from './Home/PortfolioSection.jsx'
+

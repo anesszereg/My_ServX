@@ -52,3 +52,12 @@
   background-repeat: repeat;
   
 }
+
+.text_graidient{
+  background: linear-gradient(90deg,#12c2e9,#c471ed,#f64f59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.grayscale {
+  filter: grayscale(100%);
+}

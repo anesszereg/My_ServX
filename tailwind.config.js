@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Poppins', 'sans-serif'],
+      },
       colors:{
         'blog1':'#ff0048 ',
         'blog2':'#ff3870',
