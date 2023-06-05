@@ -128,30 +128,30 @@ function PortfolioSection() {
                     Some Past Projects.
                 </h3>
 
-                <div className="z-[2] flex tracking-[1px] font-medium justify-center items-center p-4 bg-[hsla(0,0%,100%,.02)] rounded-[5px] gap-2 ">
+                <div className="z-[2] intersect flex tracking-[1px] font-medium justify-center items-center p-4 bg-[hsla(0,0%,100%,.02)] rounded-[5px] gap-2 ">
                     <p className={
-                            selectedType === 'All' ? 'text-[12px]cursor-pointer  font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px]cursor-pointer font-sans'
+                            selectedType === 'All' ? 'text-[12px] cursor-pointer intersect  font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px] cursor-pointer intersect font-sans'
                         }
                         onClick={
                             () => setSelectedType('All')
                     }>All</p>
                        <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
                     <p className={
-                            selectedType === 'Branding' ? ' text-[12px]cursor-pointer font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px]cursor-pointer font-sans'
+                            selectedType === 'Branding' ? ' text-[12px] cursor-pointer intersect font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px] cursor-pointer intersect font-sans'
                         }
                         onClick={
                             () => setSelectedType('Branding')
                     }>Branding</p>
                        <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
                     <p className={
-                            selectedType === 'Mobile app' ? ' w-[100px] text-[12px]cursor-pointer font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' w-[100px] max-sm:mx-0 mx-5 text-white text-[12px]cursor-pointer font-sans'
+                            selectedType === 'Mobile app' ? ' w-[100px] text-[12px] cursor-pointer intersect font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' w-[100px] max-sm:mx-0 mx-5 text-white text-[12px] cursor-pointer intersect font-sans'
                         }
                         onClick={
                             () => setSelectedType('Mobile app')
                     }>Mobile App</p>
                     <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
                     <p className={
-                            selectedType === 'Creative' ? 'text-[12px]cursor-pointer font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px]cursor-pointer font-sans'
+                            selectedType === 'Creative' ? 'text-[12px] cursor-pointer intersect font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px] cursor-pointer intersect font-sans'
                         }
                         onClick={
                             () => setSelectedType('Creative')
