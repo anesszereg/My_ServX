@@ -209,8 +209,8 @@ function Case() {
                 <h3 className="sm:text-5xl   text-3xl text-center font-extrabold text-slate-900">Ce Que Nous Faisons
                 </h3>
                 {/* cards container */}
-                <div className="h-full p-4 mt-4  max-w-7xl w-full grid grid-cols-4 gap-12">
-                    <div className="h-full w-full col-span-2 flex flex-col gap-3">
+                <div className="h-full p-4 mt-4  max-w-7xl w-full grid xl:grid-cols-4  md:grid-cols-2 max-sm:flex max-sm:flex-col gap-12">
+                    <div className="h-full w-full col-span-2 flex flex-col gap-3 items-center xl:items-start">
                         <p ref={subtitle} className="text-2xl  opacity-0 translate-y-12 font-medium  text-black ">
                             WE ARE
                         </p>
@@ -222,7 +222,7 @@ function Case() {
                                 }
                         }>MASTERS
                         </h3>
-                        <div className="flex w-6/12 flex-row   overflow-hidden mt-4  rounded-md  border border-solid border-gray-300">
+                        <div className="flex md:w-4/12  xl:w-6/12 flex-row   overflow-hidden mt-4  rounded-md  border border-solid border-gray-300">
                             <div className={
                                     `switch ${
                                         show ? 'bg-gray-100' : 'bg-white'
@@ -243,13 +243,13 @@ function Case() {
                     </div>
                     {
                     show ? (cards.map((item, index) => (
-                        <div  className='opacity-0 translate-y-52 '  key={index} ref={el => elementsRef.current[index] = el}  >
+                        <div  className='opacity-0 translate-y-52 xl:w-[300px] w-full'  key={index} ref={el => elementsRef.current[index] = el}  >
 
                         <CardCase item={item}
                             />
                             </div>
                     ))) : (CARDS.map((item, index) => (
-                        <div  className='opacity-0 translate-y-52 '  key={index} ref={el => elementsRef.current[index] = el}  >
+                        <div  className='opacity-0 translate-y-52 xl:w-[300px] w-full '  key={index} ref={el => elementsRef.current[index] = el}  >
 
                         <CardCase item={item}
                             />
@@ -267,7 +267,7 @@ export default Case
 
 const CardCase = ({item}) => {
     return (
-        <div className="md:h-96 h-80 relative  hover:-translate-y-3   group transition-all duration-500 ease-in-out  py-4 outline outline-2 outline-sky-100 rounded-xl from-white to-white w-full px-2  sm:px-4 shadow-lg">
+        <div className="h-96  relative  hover:-translate-y-3   group transition-all duration-500 ease-in-out  py-4 outline outline-2 outline-sky-100 rounded-xl from-white to-white w-full px-2  sm:px-4 shadow-lg">
             <div className="h-full rounded-xl z-[0] opacity-0 transition-all druation-500 ease-in-out group-hover:opacity-100 absolute bg-gradient-to-tr from-purple-400 to-sky-400 w-full inset-0"></div>
             <div className="gap-y-4 relative z-[1] flex flex-col h-full items-center">
                 <Image src={

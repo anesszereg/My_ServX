@@ -131,14 +131,14 @@ function AboutProject() {
                 <div className="bg_about_company flex  lg:flex-row flex-col  justify-center items-center h-full w-full py-28 px-16 gap-10  mb-10 ">
 
                
-            <div className="flex  opacity-0 translate-y-4  lg:w-2/6 w-11/12 mb-5 "
+            <div className="flex  opacity-0 translate-y-4  lg:w-4/6 w-full  mb-5 "
                 ref={cardContainer}>
                 <Image src='/assets/Case/app-intro.png'
                     width={450}
                     height={450}
                     className=' flex h-full w-full'/>
             </div>
-            <div className="flex flex-col w-5/12 lg:items-start items-center gap-4  lg:h-2/6">
+            <div className="flex flex-col w-full text-center lg:text-start lg:items-start items-center gap-4  lg:h-2/6">
                 {
                 <p ref = {
                     title
@@ -171,7 +171,7 @@ function AboutProject() {
                     Chez notre agence web, nous croyons que chaque entreprise, organisation ou particulier mérite un site web qui reflète leur identité unique et répond à leurs besoins spécifiques. Nous sommes déterminés à offrir des services exceptionnels à chaque client, en portant une attention particulière à la sécurité en ligne.
                 </p>
 
-                <div ref={icon_1} className="flex gap-6 opacity-0 translate-y-16 items-center w-10/12 flex-col md:flex-row lg:flex-row mt-6">
+                <div ref={icon_1} className="flex gap-6 opacity-0 translate-y-16 items-center w-10/12 flex-row  mt-6">
                     <div className="shadow-offset-xl w-20 h-20  shadow-inner-xl flex justify-center items-center bg-white rounded-md ">
                         <Image  src={andriod} alt='' width={40} height={40}  />
                     </div>

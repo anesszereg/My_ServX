@@ -1,7 +1,7 @@
 import { useState  } from "react";
 import Image from "next/image";
 import { useEffect } from "react";
-import Logo from "public/assets/logo.png";
+import Logo from "public/assets/logoNoirePNG.png";
 
 import Link from "next/link";
 import  {Link as ScrollLink} from "react-scroll"
@@ -46,7 +46,7 @@ const NavBar = () => {
         {/* object contain scales down the image so its all seen , object center centers it */}
           <div className="flex relative w-40  -left-3  h-full  items-center">
         <ScrollLink className="flex-grow " smooth="true" offset={-80} to={"/home"} >
-            <Image fill className="object-contain object-center" alt="myServX Logo" src={Logo} />
+            <Image fill className="object-contain object-center mt-[-22px]" alt="myServX Logo" src={Logo} />
         </ScrollLink>
           </div>
 
