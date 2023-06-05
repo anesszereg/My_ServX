@@ -10,10 +10,10 @@ const MovingPhones = () => {
     { url: "/assets/tablet2.webp", main: false, slow: false, small: false,top: "mt-[-175px]",right:'mr-[-20px]' },
   ];
   return (
-    <div className="absolute right-[-350px] z-[1] overflow-x-hidden overflow-y-hidden  flex items-end  justify-end w-full h-full mt-24  top-0 ">
+    <div className="absolute right-[-350px] z-[1]   flex items-end  justify-end w-full h-full mt-24  top-0 ">
       {/* faire des telephones qui bougent  */}
         
-      <div className=" imageContainer w-full overflow-x-hidden mt-[300px] pr-[-100px] overflow-y-hidden  grid grid-flow-col grid-rows-2 Items-center justify-end justify-items-end align-content-center  h-full">
+      <div className=" imageContainer w-full mt-[300px] pr-[-100px]   grid grid-flow-col grid-rows-2 Items-center justify-end justify-items-end align-content-center  h-full">
         {images.map(
           (img, index) =>
             index <= 6 && (

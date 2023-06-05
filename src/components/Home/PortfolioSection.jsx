@@ -14,14 +14,16 @@ const CARDS = [
     {
         title: "creativity Demand",
         sub_title: "DESIGN , WORDPRESS",
-        link: image1
+        link: image1,
+        type: 'Mobile app'
 
     },
 
     {
         title: "creativity Demand",
         sub_title: "DESIGN , WORDPRESS",
-        link: image2
+        link: image2,
+        type: 'creative'
 
     },
 
@@ -29,23 +31,27 @@ const CARDS = [
     {
         title: "creativity Demand",
         sub_title: "DESIGN , WORDPRESS",
-        link: image3
+        link: image3,
+        type: 'mobile app'
 
     },
     {
         title: "creativity Demand",
         sub_title: "DESIGN , WORDPRESS",
-        link: image4
+        link: image4,
+        type: 'branding'
 
     }, {
         title: "creativity Demand",
         sub_title: "DESIGN , WORDPRESS",
-        link: image5
+        link: image5,
+        type: 'branding'
 
     }, {
         title: "creativity Demand",
         sub_title: "DESIGN , WORDPRESS",
-        link: image6
+        link: image6,
+        type: 'creative'
 
     }
 ];
@@ -65,17 +71,17 @@ function PortfolioSection() {
         elementsRef.current.forEach((element, index) => {
             gsap.to(element, {
                 // y: 0,
-                height:510,
+                height: window.innerWidth <= 600 ? 610 : 510,
                 delay: index,
                 opacity: 1,
                 duration: 1,
                 ease: Power3.easeOut,
                 scrollTrigger: {
-                  trigger: elementsRef.current,
-                  start: "top bottom-=100",
-                  end: "bottom center",
-                  toggleActions: "play none none reset",
-                },
+                    trigger: elementsRef.current,
+                    start: "top bottom-=100",
+                    end: "bottom center",
+                    toggleActions: "play none none reset"
+                }
             })
         })
 
@@ -105,10 +111,15 @@ function PortfolioSection() {
             scrollTrigger: cardContainer.current
         })
     }, [])
+    const [selectedType, setSelectedType] = useState('All');
+    const filteredCards = selectedType === 'All' ? CARDS : CARDS.filter(card => card.type.toLowerCase() === selectedType.toLowerCase());
 
 
     return (
-        <section id="Portfolio" className=" mt-20 h-full w-full px-8 py-16 text-slate-900  bg-cover bg-center bg-no-repeat bg-black ">
+        <section id="Portfolio" className=" relative mt-20 h-full w-full px-8 py-16 text-slate-900  bg-cover bg-center bg-no-repeat bg-[#111215] ">
+
+            <div className=" fixed left-[-250px] top-[250px]   w-[500px] h-[500px] rounded-full bg-gradient-to-br from-blue-500 to-blue-300 opacity-25 blur-[100px]"></div>
+            <div className=" fixed right-[-250px] top-0   w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#fb5343] to-[#6549d5] opacity-25 blur-[100px]"></div>
             <div className="h-full w-full  flex flex-col items-center gap-y-2 ">
                 <p className="text-[17px]  tracking-[7px] font-sans  bg-gradient-to-r font-medium text-transparent text-white">
                     PORTFOLIO
@@ -119,18 +130,48 @@ function PortfolioSection() {
                     <br/>
                     Some Past Projects.
                 </h3>
+
+                <div className=" flex tracking-[1px] font-medium justify-center items-center p-4 bg-[hsla(0,0%,100%,.02)] rounded-[5px] gap-2 ">
+                    <p className={
+                            selectedType === 'All' ? 'text-[12px] font-sans text-[#12c2e9] font-bold mx-5' : ' mx-5 text-white text-[12px] font-sans'
+                        }
+                        onClick={
+                            () => setSelectedType('All')
+                    }>All</p>
+                       <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
+                    <p className={
+                            selectedType === 'Branding' ? 'text-[12px] font-sans text-[#12c2e9] font-bold mx-5' : ' mx-5 text-white text-[12px] font-sans'
+                        }
+                        onClick={
+                            () => setSelectedType('Branding')
+                    }>Branding</p>
+                       <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
+                    <p className={
+                            selectedType === 'Mobile app' ? 'text-[12px] font-sans text-[#12c2e9] font-bold mx-5' : ' mx-5 text-white text-[12px] font-sans'
+                        }
+                        onClick={
+                            () => setSelectedType('Mobile app')
+                    }>Mobile App</p>
+                    <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
+                    <p className={
+                            selectedType === 'Creative' ? 'text-[12px] font-sans text-[#12c2e9] font-bold mx-5' : ' mx-5 text-white text-[12px] font-sans'
+                        }
+                        onClick={
+                            () => setSelectedType('Creative')
+                    }>Creative</p>
+
+                </div>
                 {/* cards container */}
-                <div className=" p-4 mt-4 h-[1110px]  max-w-[1220px] w-full grid grid-cols-3 grid-rows-2  gap-3  ">
+                <div className=" p-4 mt-4 max-w-[1220px] w-full grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 grid-rows-2  gap-3  ">
+
 
                     {
-                    CARDS.map((item, index) => (
-                        <div className='opacity-0   h-0 '
+                    filteredCards.map((item, index) => (
+                        <div className='opacity-0 h-0'
                             key={index}
                             ref={
                                 el => elementsRef.current[index] = el
-                        }
-                        >
-
+                        }>
                             <Card item={item}/>
                         </div>
                     ))
@@ -145,41 +186,37 @@ export default PortfolioSection
 
 
 const Card = ({item}) => {
- 
-  const cardRef = useRef();
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const cardRef = useRef();
 
-    gsap.to(cardRef.current, {
-      height: 463,
-      opacity: 1,
-      duration: 0.5,
-      ease: Power3.easeOut,
-      scrollTrigger: {
-        trigger: cardRef.current,
-        start: "top bottom-=100",
-        end: "bottom center",
-        toggleActions: "play none none reset",
-      },
-    });
-  }, []);
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-  
+        gsap.to(cardRef.current, {
+            height: 463,
+            opacity: 1,
+            duration: 0.5,
+            ease: Power3.easeOut,
+            scrollTrigger: {
+                trigger: cardRef.current,
+                start: "top bottom-=100",
+                end: "bottom center",
+                toggleActions: "play none none reset"
+            }
+        });
+    }, []);
+
+
     return (
 
-        <div  className="h-full w-full   flex flex-col gap-2    transition-all duration-500 ease-in-out  ">
-            <div className="w-[370px] h-[463px] overflow-hidden ">
-                <Image
-                
-                src={
+        <div className="h-full w-full   flex flex-col gap-2    transition-all duration-500 ease-in-out  ">
+            <div className=" md:w-[370px] sm:w-[510px] md:h-[463px] sm:h-full overflow-hidden ">
+                <Image src={
                         item.link
                     }
                     alt='image'
-                    width={370}
-                    height={463}
-                    className='hover:scale-110 hover:transition-transform hover:duration-300'
-                    />
+
+                    className='md:w-[370px] md:h-[463px]  object-contain sm:w-full sm:h-[637px] hover:scale-110 hover:transition-transform hover:duration-300'/>
             </div>
             <div className="flex flex-col gap-2 items-center ">
                 <p className="text-[18px]  transition-colors ease-in-out duration-75 text-white sm:w-72 text-center font-bold capitalize">

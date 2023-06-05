@@ -44,7 +44,7 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
           
 
         </ul>
-        <div className="flex items-center  w-full md:w-fit  md:gap-x-0">
+        <div className="flex  items-center justify-end  w-full md:w-fit  md:gap-x-0">
           
           <button onClick={()=>{setActiveNav(!activeNav); setVisible(false)}} type="button" className="block md:hidden">
             <BiMenuAltRight className="text-4xl   text-slate-800" />

@@ -51,7 +51,7 @@ const HeroSection = () => {
         </h1>
         <div className="flex sm:flex-row justify-center lg:justify-start flex-col w-full items-center gap-y-4 sm:gap-x-12">
           <ScrollLink smooth offset={-100} to='about'>
-          <button className="sm:w-72 max-w-xs w-full uppercase transition-all ease-in-out duration-300 hover:bg-blue-500 text-white font-medium h-14 sm:h-16 bg-blue-600 rounded-lg">
+          <button className="w-72 max-w-xs uppercase transition-all ease-in-out duration-300 hover:bg-blue-500 text-white font-medium h-14 sm:h-16 bg-blue-600 rounded-lg">
           explorer
           </button>
           </ScrollLink>
