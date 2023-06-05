@@ -125,7 +125,7 @@ function AboutProject() {
 
 
     return (
-        <div className="bg_about_company flex flex-col justify-center items-center h-full w-full py-28 px-16 gap-10  mb-10 ">
+        <div className="bg_about_company flex flex-col justify-center items-center h-full w-full py-28 px-16 max-sm:px-0 gap-10  mb-10 ">
              <p ref={big_title}
                 className = 'text-work  opacity-0 translate-y-1  font-bold text-5xl' > OUR PROJECT </p>
                 <div className="bg_about_company flex  lg:flex-row flex-col  justify-center items-center h-full w-full py-28 px-16 gap-10  mb-10 ">

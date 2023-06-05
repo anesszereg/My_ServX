@@ -11,6 +11,7 @@ const MobileNav = ({ handleClick, activeNav ,visible }) => {
     { title: "services", slug: "/#services", icon: <AiOutlineHome className="text-2xl" /> },
     { title: "work", slug: "/#work", icon: <AiOutlineHome className="text-2xl" /> },
     { title: "blog", slug: "/#blog", icon: <AiOutlineHome className="text-2xl" /> },
+    // { title: "Project", slug: "/#blog", icon: <AiOutlineHome className="text-2xl" /> },
 
   ];
   
@@ -61,6 +62,20 @@ const MobileNav = ({ handleClick, activeNav ,visible }) => {
                           onClick={() => handleClick(true)}
             className="h-full w-full flex items-center justify-between" smooth={true} offset={-80} href='/AgencyPage' >
               about
+              <AiOutlineHome className="text-2xl" />
+              
+            </Link>
+          </li>
+          <li
+            
+            className="h-12 uppercase group font-medium tracking-wider grid  text-gray-800 w-full relative"
+          >
+            {/* left and translate to center the bottom gradient */}
+            <div className="absolute  opacity-100  transition-all ease-in-out duration-500 w-full h-[2px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
+            <Link
+                          onClick={() => handleClick(true)}
+            className="h-full w-full flex items-center justify-between" smooth={true} offset={-80} href='/ProjectPage' >
+              Project
               <AiOutlineHome className="text-2xl" />
               
             </Link>
