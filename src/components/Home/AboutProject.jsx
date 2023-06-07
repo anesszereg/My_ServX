@@ -127,11 +127,11 @@ function AboutProject() {
     return (
         <div className="bg_about_company flex flex-col justify-center items-center h-full w-full py-28 px-16 max-sm:px-0 gap-10  mb-10 ">
              <p ref={big_title}
-                className = 'text-work  opacity-0 translate-y-1  font-bold text-5xl' > OUR PROJECT </p>
+                className = 'text-work  opacity-0 translate-y-5  font-bold text-5xl' > OUR PROJECT </p>
                 <div className="bg_about_company flex  lg:flex-row flex-col  justify-center items-center h-full w-full py-28 px-16 gap-10  mb-10 ">
 
                
-            <div className="flex  opacity-0 translate-y-4  lg:w-4/6 w-full  mb-5 "
+            <div className="flex  opacity-0 translate-y-8  lg:w-4/6 w-full  mb-5 "
                 ref={cardContainer}>
                 <Image src='/assets/Case/app-intro.png'
                     width={450}
@@ -143,7 +143,7 @@ function AboutProject() {
                 <p ref = {
                     title
                 }
-                className = 'text-work  opacity-0 translate-y-4  font-normal text-lg' > ABOUT THE PROJECT </p>
+                className = 'text-work  opacity-0 translate-y-8  font-normal text-lg' > ABOUT THE PROJECT </p>
             }
                 <p ref={subtitle}
                     className='text-work-card leading-tight  font-bold lg:text-5xl text-[28px] mb-3 opacity-0 translate-y-4 '>On-Demand Food Delivery Application</p>

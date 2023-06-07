@@ -33,7 +33,7 @@ function LogoCarousel() {
     })
     gsap.to(logo_2.current, {
         y: 0,
-        delay: 0.6,
+        delay: 0.8,
         opacity: 1,
         duration: 1,
         ease: Power3.easeOut,
@@ -49,7 +49,7 @@ function LogoCarousel() {
     })
     gsap.to(logo_4.current, {
         y: 0,
-        delay: 2,
+        delay: 1.8,
         opacity: 1,
         duration: 1,
         ease: Power3.easeOut,
