@@ -27,10 +27,10 @@ export default function Home() {
       {/* <Cursor/> */}
       <HeroSection />
       <ServicesSection />
-      <Case/>
       <AboutUs />
       <StaticSection/>
-      <WorkCategory/>
+      {/* <WorkCategory/> */}
+      <Case/>
       <Work />
       <Technologies />
       <ScrollSection/>
