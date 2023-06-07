@@ -14,7 +14,7 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
   return (
     <div className="w-full max-w-4xl flex  h-full   lg:pr-6">
       <nav className="w-full flex items-center lg:pr-4 h-full">
-        <ul className="w-full intersect gap-x-8 lg:mr-10   lg:gap-x-16 h-full hidden md:flex items-center">
+        <ul className="w-full intersect gap-x-8 lg:mr-6   lg:gap-x-16 h-full hidden md:flex items-center">
         <li className="h-full  w-full uppercase group font-medium tracking-wider grid place-items-center  text-gray-800 w-20 relative">
               {/* left and translate to center the bottom gradient */}
               <div className="absolute  group-hover:left-0 right-0   transition-all ease-in-out duration-500 group-hover:w-full w-0 h-[4px] bottom-0  bg-gradient-to-r from-sky-400 to-indigo-400"></div>
@@ -49,7 +49,7 @@ const Navlinks = ({visible,setVisible,setActiveNav,activeNav}) => {
           <button onClick={()=>{setActiveNav(!activeNav); setVisible(false)}} type="button" className="block md:hidden">
             <BiMenuAltRight className="text-4xl   text-slate-800" />
           </button>
-          <button onClick={()=>setVisible(!visible)} type="button" className="md:grid hidden place-items-center md:w-40 w-12 h-12 rounded-full relative overflow-hidden transition-all group font-bold text-sm duration-500 ease-in-out   text-white uppercase bg-gradient-to-r from-button1  via-button2 to-button3">
+          <button onClick={()=>setVisible(!visible)} type="button" className="md:grid hidden place-items-center md:w-40 w-12 h-12  rounded-full relative overflow-hidden transition-all group font-bold text-sm duration-500 ease-in-out   text-white uppercase bg-gradient-to-r from-button1  via-button2 to-button3">
             <div className="w-12 h-12 group-hover:scale-[1.75] transition-all duration-500 ease-in-out rounded-full bg-purple-200  md:bg-opacity-20 bg-opacity-20 absolute -right-6 -top-6 "></div>
             <span className="hidden md:block">contact</span>
             <BsFillTelephoneFill className="md:hidden text-xl text-white" />
