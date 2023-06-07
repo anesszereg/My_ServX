@@ -45,9 +45,9 @@ const NavBar = () => {
       <div className="w-full flex max-h-20 h-full md:px-0 px-4 items-start  md:items-center justify-between ">
         {/* object contain scales down the image so its all seen , object center centers it */}
           <div className="flex relative w-40  -left-3  h-full  items-center">
-        <ScrollLink className="flex-grow " smooth="true" offset={-80} to={"/home"} >
-            <Image fill className="object-contain object-center mt-[-22px]" alt="myServX Logo" src={Logo} />
-        </ScrollLink>
+        <Link className="flex-grow " smooth="true" offset={-80} href={"/"} >
+            <Image fill className=" cursor-pointer object-contain object-center mt-[-22px]" alt="myServX Logo" src={Logo} />
+        </Link>
           </div>
 
         <Navlinks  setActiveNav={setActiveNav} activeNav={activeNav} setVisible={setVisible} visible={visible} />

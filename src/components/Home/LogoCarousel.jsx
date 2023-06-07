@@ -47,7 +47,13 @@ function LogoCarousel() {
 
   return (
     <div className="w-9/12 h-[90px] mx-auto my-20">
-      <div className="relative overflow-hidden">
+      <div className="relative flex flex-col align-items overflow-hidden ">
+      <p
+          
+          className="text-xl opacity-1 bg-gradient-to-r font-medium text-transparent from-purple-600 to-blue-600 bg-clip-text "
+        >
+          Nos partenaires
+        </p>
         <div
           className="flex w-9/12 justify-center transition-transform duration-300 ml-12"
           style={{ transform: `translateX(-${currentSlide * 9}%)` }}

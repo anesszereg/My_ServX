@@ -32,10 +32,10 @@ export default function Home() {
       {/* <WorkCategory/> */}
       <Case/>
       <ScrollSection/>
+      <LogoCarousel/>
       {/* <Work /> */}
       <PortfolioSection/>
       <Technologies />
-      <LogoCarousel/>
       <div className="w-full gap-8 max-w-7xl mt-20 mb-5 px-4 md:flex-row flex-col flex items-center justify-center ">
         <h3 className="text-4xl text-center font-bold text-slate-700">Votre Idée, Une réalité</h3>
         <button  type="button" className="grid intersect  place-items-center w-72 h-14 rounded-full relative overflow-hidden transition-all group font-medium duration-500 ease-in-out   text-white capitalize bg-gradient-to-r from-button1  via-button2 to-button3">
