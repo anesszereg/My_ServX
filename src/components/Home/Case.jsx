@@ -203,11 +203,7 @@ function Case() {
     return (
         <section id="case" className=" w-full px-8 py-16 text-slate-900 bg-[/images/wave.svg] bg-cover bg-center bg-no-repeat ">
             <div className="h-full w-full  flex flex-col items-center gap-y-2 ">
-                <p className="text-xl   bg-gradient-to-r font-medium text-transparent from-purple-600 to-blue-600 bg-clip-text ">
-                    NOS SERVICES POPULAIRES
-                </p>
-                <h3 className="sm:text-5xl   text-3xl text-center font-extrabold text-slate-900">Ce Que Nous Faisons
-                </h3>
+               
                 {/* cards container */}
                 <div className="h-full p-4 mt-4  max-w-7xl w-full grid xl:grid-cols-4  md:grid-cols-2 max-sm:flex max-sm:flex-col gap-12">
                     <div className="h-full w-full col-span-2 flex flex-col gap-3 items-center xl:items-start">
