@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import logo from 'public/assets/logoCarousel/download.png';
 import logo2 from 'public/assets/logoCarousel/download_1.png';
@@ -7,10 +11,6 @@ import logo3 from 'public/assets/logoCarousel/download_2.png';
 import logo4 from 'public/assets/logoCarousel/download_3.png';
 import logo5 from 'public/assets/logoCarousel/wing.png';
 
-import Image from 'next/image';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 const settings = {
   dots: true,
   infinite: true,
@@ -52,6 +52,8 @@ const settings = {
 };
 
 function Carousel() {
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
+
   const logos = [
     { src: logo, alt: 'Logo 1' },
     { src: logo2, alt: 'Logo 2' },
@@ -60,11 +62,20 @@ function Carousel() {
     { src: logo5, alt: 'Logo 5' },
   ];
 
+  const handleHover = (index) => {
+    setHoveredIndex(index);
+  };
+
   return (
     <Slider {...settings}>
       {logos.map((logo, index) => (
-        <div key={index} className='w-[240px] h-[80px] flex flex-shrink-0 overflow-hidden  ml-4 justify-center items-center'>
-          <div className='image-container  '>
+        <div
+          key={index}
+          className='w-[240px] h-[80px] flex flex-shrink-0 overflow-hidden ml-4 justify-center items-center'
+          onMouseEnter={() => handleHover(index)}
+          onMouseLeave={() => handleHover(-1)}
+        >
+          <div className={`image-container ${hoveredIndex === index ? '' : 'grayscale'}`}>
             <Image src={logo.src} alt={logo.alt} layout='fill' objectFit='contain' />
           </div>
           <style jsx>{`
@@ -72,16 +83,19 @@ function Carousel() {
               width: 240px;
               height: 80px;
               position: relative;
-              overflow:hidden
-
-              
+              overflow: hidden;
             }
-            .slick-list{
-                height: 100px;
+            
+            .grayscale {
+              filter: grayscale(100%);
             }
-            .slick-slide{
+            
+            .slick-list {
               height: 100px;
-
+            }
+            
+            .slick-slide {
+              height: 100px;
             }
           `}</style>
         </div>
