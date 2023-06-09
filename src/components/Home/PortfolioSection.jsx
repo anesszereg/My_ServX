@@ -15,7 +15,7 @@ const CARDS = [
         title: "creativity Demand 1",
         sub_title: "DESIGN , WORDPRESS 1",
         link: image1,
-        type: 'Mobile app'
+        type: 'Mobile'
 
     },
 
@@ -32,7 +32,7 @@ const CARDS = [
         title: "creativity Demand",
         sub_title: "DESIGN , WORDPRESS",
         link: image3,
-        type: 'mobile app'
+        type: 'mobile'
 
     },
     {
@@ -58,89 +58,111 @@ const CARDS = [
 
 function PortfolioSection() {
     gsap.registerPlugin(ScrollTrigger);
-  const subtitle = useRef();
-  const title = useRef();
-  const cardContainer = useRef();
-  const elementsRef = useRef([]);
-  const [selectedType, setSelectedType] = useState('All');
-  const filteredCards = selectedType === 'All' ? CARDS : CARDS.filter(card => card.type.toLowerCase() === selectedType.toLowerCase());
+    const subtitle = useRef();
+    const title = useRef();
+    const cardContainer = useRef();
+    const elementsRef = useRef([]);
+    const [selectedType, setSelectedType] = useState('All');
+    const filteredCards = selectedType === 'All' ? CARDS : CARDS.filter(card => card.type.toLowerCase() === selectedType.toLowerCase());
+    useEffect(() => {
+        gsap.to(subtitle.current, {
+          y: 0,
+          delay: 0.2,
+          opacity: 1,
+          duration: 1,
+          ease: Power3.easeOut,
+          scrollTrigger: subtitle.current
+        });
+      
+        gsap.to(title.current, {
+          y: 0,
+          delay: 0.2,
+          opacity: 1,
+          duration: 1,
+          ease: Power3.easeOut,
+          scrollTrigger: title.current
+        });
+      
+        gsap.to(cardContainer.current, {
+          y: 0,
+          delay: 0.2,
+          opacity: 1,
+          duration: 1,
+          ease: Power3.easeOut,
+          scrollTrigger: cardContainer.current
+        });
+      
+        elementsRef.current.forEach((element, index) => {
+          gsap.to(element, {
+            height: window.innerWidth <= 600 ? 610 : 510,
+            delay: 0.2,
+            opacity: 1,
+            duration: 1,
+            ease: Power3.easeOut,
+            scrollTrigger: {
+              trigger: element,
+              start: "top bottom-=100",
+              end: "bottom center",
+            //   toggleActions: "play none none reset"
+            }
+          });
+        });
+      }, []); // Add selectedType as a dependency
+      
 
-  useEffect(() => {
-    gsap.to(subtitle.current, {
-      y: 0,
-      delay: 0.2,
-      opacity: 1,
-      duration: 1,
-      ease: Power3.easeOut,
-      scrollTrigger: subtitle.current
-    });
-
-    gsap.to(title.current, {
-      y: 0,
-      delay: 0.2,
-      opacity: 1,
-      duration: 1,
-      ease: Power3.easeOut,
-      scrollTrigger: title.current
-    });
-
-    gsap.to(cardContainer.current, {
-      y: 0,
-      delay: 0.2,
-      opacity: 1,
-      duration: 1,
-      ease: Power3.easeOut,
-      scrollTrigger: cardContainer.current
-    });
-
-    elementsRef.current = elementsRef.current.slice(0, filteredCards.length);
-
-    elementsRef.current.forEach((element, index) => {
-      gsap.to(element, {
-        height: window.innerWidth <= 600 ? 610 : 510,
-        delay: 0.4,
-        opacity: 1,
-        duration: 1,
-        ease: Power3.easeOut,
-        scrollTrigger: {
-          trigger: element,
-          start: "top bottom-=100",
-          end: "bottom center",
-          toggleActions: "play none none reset"
+      useEffect(() => {
+        gsap.registerPlugin();
+        
+        if (selectedType === 'All') {
+          gsap.fromTo(
+            elementsRef.current,
+            { opacity: 0, height: 0 },
+            
+            {  height: window.innerWidth <= 600 ? 610 : 510,
+                delay: 0.2,
+                opacity: 1,
+                duration: 1,
+                }
+          );
         }
-      });
-    });
-  }, [selectedType, filteredCards]);
+        if (selectedType === 'Mobile') {
+          gsap.fromTo(
+            elementsRef.current,
+            { opacity: 0, height: 0 },
+            
+            {  height: window.innerWidth <= 600 ? 610 : 510,
+                delay: 0.2,
+                opacity: 1,
+                duration: 1,
+                }
+          );
+        }
+        if (selectedType === 'Creative') {
+          gsap.fromTo(
+            elementsRef.current,
+            { opacity: 0, height: 0 },
+            
+            {  height: window.innerWidth <= 600 ? 610 : 510,
+                delay: 0.2,
+                opacity: 1,
+                duration: 1,
+                }
+          );
+        }
+        if (selectedType === 'Branding') {
+          gsap.fromTo(
+            elementsRef.current,
+            { opacity: 0, height: 0 },
+            
+            {  height: window.innerWidth <= 600 ? 610 : 510,
+                delay: 0.2,
+                opacity: 1,
+                duration: 1,
+                }
+          );
+        }
+      }, [selectedType]);
   
-//   const restartAnimation = () => {
-//     gsap.fromTo(
-//       subtitle.current,
-//       { y: -20, opacity: 0 },
-//       { y: 0, opacity: 1, duration: 1, ease: Power3.easeOut, scrollTrigger: subtitle.current }
-//     );
-//     gsap.fromTo(
-//       title.current,
-//       { y: -20, opacity: 0 },
-//       { y: 0, opacity: 1, duration: 1, ease: Power3.easeOut, scrollTrigger: title.current }
-//     );
-//     gsap.fromTo(
-//       cardContainer.current,
-//       { y: -20, opacity: 0 },
-//       { y: 0, opacity: 1, duration: 1, ease: Power3.easeOut, scrollTrigger: cardContainer.current }
-//     );
-//     elementsRef.current.forEach((element, index) => {
-//       gsap.fromTo(
-//         element,
-//         { height: 0, opacity: 0 },
-//         { height: window.innerWidth <= 600 ? 610 : 510, opacity: 1, duration: 1, ease: Power3.easeOut, scrollTrigger: { trigger: element, start: "top bottom-=100", end: "bottom center", toggleActions: "play none none reset" } }
-//       );
-//     });
-//   };
-
-//   useEffect(() => {
-//     restartAnimation();
-//   }, [selectedType]);
-
 
   
     return (
@@ -158,35 +180,26 @@ function PortfolioSection() {
                     <br/>
                     Some Past Projects.
                 </h3>
-
                 <div className="z-[2] intersect flex tracking-[1px] font-medium justify-center items-center p-4 bg-[hsla(0,0%,100%,.02)] rounded-[5px] gap-2 ">
                     <p className={
                             selectedType === 'All' ? 'text-[12px] cursor-pointer intersect  font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px] cursor-pointer intersect font-sans'
                         }
-                        onClick={
-                            () => setSelectedType('All')
-                    }>All</p>
+                        onClick={() => setSelectedType('All')}>All</p>
                        <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
                     <p className={
                             selectedType === 'Branding' ? ' text-[12px] cursor-pointer intersect font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px] cursor-pointer intersect font-sans'
                         }
-                        onClick={
-                            () => setSelectedType('Branding')
-                    }>Branding</p>
+                        onClick={() => setSelectedType('Branding')}>Branding</p>
                        <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
                     <p className={
                             selectedType === 'Mobile app' ? ' w-[100px] text-[12px] cursor-pointer intersect font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' w-[100px] max-sm:mx-0 mx-5 text-white text-[12px] cursor-pointer intersect font-sans'
-                        }
-                        onClick={
-                            () => setSelectedType('Mobile app')
+                        }onClick={() => setSelectedType('Mobile')
                     }>Mobile App</p>
                     <div className="flex justify-center items-center h-2 w-2 bg-[#12c2e9] rounded-full"></div>
                     <p className={
                             selectedType === 'Creative' ? 'text-[12px] cursor-pointer intersect font-sans text-[#12c2e9] font-bold max-sm:mx-0 mx-5' : ' max-sm:mx-0 mx-5 text-white text-[12px] cursor-pointer intersect font-sans'
                         }
-                        onClick={
-                            () => setSelectedType('Creative')
-                    }>Creative</p>
+                        onClick={() => setSelectedType('Creative')}>Creative</p>
 
                 </div>
                 {/* cards container */}
@@ -194,10 +207,8 @@ function PortfolioSection() {
 
 
                 {filteredCards.length > 0 ? (
-                    
           filteredCards.map((item, index) => (
             <div className="opacity-0 h-0" key={index} ref={el => (elementsRef.current[index] = el)}>
-                
               <Card item={item} />
             </div>
           ))
