@@ -123,16 +123,16 @@ function Case() {
 
     useEffect(() => {
         
-        elementsRef.current.forEach((element, index) => {
-            gsap.to(element, {
-                y: 0,
-                delay: index,
-                opacity: 1,
-                duration: 0.5,
-                ease: Power3.easeOut,
-                scrollTrigger: elementsRef.current
-            })
-        })
+        // elementsRef.current.forEach((element, index) => {
+        //     gsap.to(element, {
+        //         y: 0,
+        //         delay: index,
+        //         opacity: 1,
+        //         duration: 0.5,
+        //         ease: Power3.easeOut,
+        //         scrollTrigger: elementsRef.current
+        //     })
+        // })
         gsap.to(text.current, {
             y: 0,
             delay: 0.2,

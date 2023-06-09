@@ -58,65 +58,66 @@ const CARDS = [
 
 function PortfolioSection() {
     gsap.registerPlugin(ScrollTrigger);
-    const subtitle = useRef();
-    const title = useRef();
-    const cardContainer = useRef();
-    const elementsRef = useRef([]);
-    const [selectedType, setSelectedType] = useState('All');
-    const filteredCards = selectedType === 'All' ? CARDS : CARDS.filter(card => card.type.toLowerCase() === selectedType.toLowerCase() );
+  const subtitle = useRef();
+  const title = useRef();
+  const cardContainer = useRef();
+  const elementsRef = useRef([]);
+  const [selectedType, setSelectedType] = useState('All');
+  const filteredCards = selectedType === 'All' ? CARDS : CARDS.filter(card => card.type.toLowerCase() === selectedType.toLowerCase());
 
+  useEffect(() => {
+    gsap.to(subtitle.current, {
+      y: 0,
+      delay: 0.2,
+      opacity: 1,
+      duration: 1,
+      ease: Power3.easeOut,
+      scrollTrigger: subtitle.current
+    });
 
+    gsap.to(title.current, {
+      y: 0,
+      delay: 0.2,
+      opacity: 1,
+      duration: 1,
+      ease: Power3.easeOut,
+      scrollTrigger: title.current
+    });
 
-    useEffect(() => {
-        gsap.to(subtitle.current, {
-          y: 0,
-          delay: 0.2,
-          opacity: 1,
-          duration: 1,
-          ease: Power3.easeOut,
-          scrollTrigger: subtitle.current
-        });
-    
-        gsap.to(title.current, {
-          y: 0,
-          delay: 0.2,
-          opacity: 1,
-          duration: 1,
-          ease: Power3.easeOut,
-          scrollTrigger: title.current
-        });
-    
-        gsap.to(cardContainer.current, {
-          y: 0,
-          delay: 0.2,
-          opacity: 1,
-          duration: 1,
-          ease: Power3.easeOut,
-          scrollTrigger: cardContainer.current
-        });
-    
-        elementsRef.current.forEach((element, index) => {
-          gsap.to(element, {
-            height: window.innerWidth <= 600 ? 610 : 510,
-            delay: index,
-            opacity: 1,
-            duration: 1,
-            ease: Power3.easeOut,
-            scrollTrigger: {
-              trigger: element,
-              start: "top bottom-=100",
-              end: "bottom center",
-              toggleActions: "play none none reset"
-            }
-          });
-        });
-      }, [selectedType]);
+    gsap.to(cardContainer.current, {
+      y: 0,
+      delay: 0.2,
+      opacity: 1,
+      duration: 1,
+      ease: Power3.easeOut,
+      scrollTrigger: cardContainer.current
+    });
+
+    elementsRef.current = elementsRef.current.slice(0, filteredCards.length);
+
+    elementsRef.current.forEach((element, index) => {
+      gsap.to(element, {
+        height: window.innerWidth <= 600 ? 610 : 510,
+        delay: index,
+        opacity: 1,
+        duration: 1,
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: element,
+          start: "top bottom-=100",
+          end: "bottom center",
+          toggleActions: "play none none reset"
+        }
+      });
+    });
+  }, [selectedType, filteredCards]);
+
   
     return (
         <section id="Portfolio" className=" relative mt-20 h-full w-full px-8 py-16 text-slate-900  bg-cover bg-center bg-no-repeat bg-[#111215] ">
 
-            <div className=" fixed left-[-250px] top-[250px]   w-[500px] h-[500px] rounded-full bg-gradient-to-br from-blue-500 to-blue-300 opacity-25 blur-[100px]"></div>
-            <div className=" fixed right-[-250px] top-0   w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#fb5343] to-[#6549d5] opacity-25 blur-[100px]"></div>
+            <div className=" absolute left-[-250px] top-[250px]   w-[500px] h-[500px] rounded-full bg-gradient-to-br from-blue-500 to-blue-300 opacity-25 blur-[100px]"></div>
+            <div className=" absolute right-[-250px] top-0   w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#fb5343] to-[#6549d5] opacity-25 blur-[100px]"></div>
             <div className="h-full w-full  flex flex-col items-center gap-y-2 ">
                 <p className="text-[17px]  tracking-[7px] font-sans  bg-gradient-to-r font-medium text-transparent text-white">
                     PORTFOLIO
