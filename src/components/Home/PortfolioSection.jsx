@@ -98,7 +98,7 @@ function PortfolioSection() {
     elementsRef.current.forEach((element, index) => {
       gsap.to(element, {
         height: window.innerWidth <= 600 ? 610 : 510,
-        delay: index,
+        delay: 0.4,
         opacity: 1,
         duration: 1,
         ease: Power3.easeOut,
@@ -111,6 +111,36 @@ function PortfolioSection() {
       });
     });
   }, [selectedType, filteredCards]);
+  
+//   const restartAnimation = () => {
+//     gsap.fromTo(
+//       subtitle.current,
+//       { y: -20, opacity: 0 },
+//       { y: 0, opacity: 1, duration: 1, ease: Power3.easeOut, scrollTrigger: subtitle.current }
+//     );
+//     gsap.fromTo(
+//       title.current,
+//       { y: -20, opacity: 0 },
+//       { y: 0, opacity: 1, duration: 1, ease: Power3.easeOut, scrollTrigger: title.current }
+//     );
+//     gsap.fromTo(
+//       cardContainer.current,
+//       { y: -20, opacity: 0 },
+//       { y: 0, opacity: 1, duration: 1, ease: Power3.easeOut, scrollTrigger: cardContainer.current }
+//     );
+//     elementsRef.current.forEach((element, index) => {
+//       gsap.fromTo(
+//         element,
+//         { height: 0, opacity: 0 },
+//         { height: window.innerWidth <= 600 ? 610 : 510, opacity: 1, duration: 1, ease: Power3.easeOut, scrollTrigger: { trigger: element, start: "top bottom-=100", end: "bottom center", toggleActions: "play none none reset" } }
+//       );
+//     });
+//   };
+
+//   useEffect(() => {
+//     restartAnimation();
+//   }, [selectedType]);
+
 
   
     return (

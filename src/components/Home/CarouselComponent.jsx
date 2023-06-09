@@ -1,109 +1,78 @@
 import { useEffect, useState, useRef } from "react";
+import Image from 'next/image';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import logo1 from 'public/assets/Case/restro-app-1.jpg';
+import logo3 from 'public/assets/Case/restro-app-2.jpg';
+import logo4 from 'public/assets/Case/restro-app-3.jpg';
+import logo5 from 'public/assets/Case/restro-app-4.jpg';
+
 
 const images = [
-  "/assets/Case/restro-app-1.jpg",
-  "/assets/Case/restro-app-2.jpg",
-  "/assets/Case/restro-app-3.jpg",
-  "/assets/Case/restro-app-4.jpg",
+  {
+    src: logo1,
+  },
+  {
+    src: logo5,
+  },
+  {
+    src: logo3,
+  },
+  {
+    src: logo4,
+  }
 ];
 
-const CarouselComponent = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [dragStartX, setDragStartX] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const carouselRef = useRef(null);
-
- 
-
-  const handleDragStart = (e) => {
-    setDragStartX(e.clientX);
-  };
-
-  const handleDragEnd = (e) => {
-    const dragEndX = e.clientX;
-    const diffX = dragEndX - dragStartX;
-
-    if (diffX > 100) {
-      // Scroll to the previous image
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === 0 ? images.length - 1 : prevIndex - 1
-        );
-        setIsTransitioning(false);
-      }, 500); // Delay before translating the images
-    } else if (diffX < -100) {
-      // Scroll to the next image
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setIsTransitioning(false);
-      }, 500); // Delay before translating the images
+const settings = {
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3, // Set the number of images to show at a time
+  slidesToScroll: 1, // Set the number of images to scroll at a time
+  centerMode: true,
+  autoplay: true, 
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        centerMode: true,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode: true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+      }
     }
-  };
+  ]
+};
 
-  const displayedImages = [
-    images[(currentIndex - 1 + images.length) % images.length],
-    images[currentIndex],
-    images[(currentIndex + 1) % images.length],
-  ];
-
+const CarouselComponent = () => {
   return (
-    <div
-      className="flex items-center justify-center h-screen select-none "
-      ref={carouselRef}
-      onMouseDown={handleDragStart}
-      onMouseUp={handleDragEnd}
-    >
-      {/* Show three images on large screens */}
-      <div className="hidden md:flex">
-        {displayedImages.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Carousel Image ${index}`}
-            className="w-full h-10/12 object-cover  cursor-pointer pointer-events-none"
-            style={{
-              transform:
-                index === 0
-                  ? "translateX(-10%)"
-                  : index === 2
-                  ? "translateX(10%)"
-                  : "none",
-              transition: isTransitioning ? "transform 0.5s ease-in-out" : "none",
-            }}
-          />
-        ))}
-      </div>
+    <Slider {...settings}>
+      {/* <div className="w-9/10 flex "> */}
 
-      {/* Show two images on medium screens */}
-      <div className="hidden sm:flex md:hidden">
-        {displayedImages.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Carousel Image ${index}`}
-            className="w-full h-10/12 object-cover select-none cursor-pointer pointer-events-none"
-            style={{
-              transform: index === 1 ? "translateX(10%)" : "none",
-              transition: isTransitioning ? "transform 0.5s ease-in-out" : "none",
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Show one image on small screens */}
-      <div className="sm:flex md:hidden">
-        {displayedImages.slice(1, 2).map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Carousel Image ${index}`}
-            className="w-full h-10/12 object-cover select-none cursor-pointer pointer-events-none"
-          />
-        ))}
-      </div>
-    </div>
+      {images.map((i, index) => (
+        <div key={index} className="h-[770px] ml-5  flex-shrink-0 w-[358px] flex justify-center items-center">
+          <Image src={i.src} alt="h" height={770} width={358}  />
+        </div>
+      ))}
+          {/* </div> */}
+    </Slider>
   );
 };
 

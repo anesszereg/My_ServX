@@ -20,7 +20,10 @@ function Project() {
       <NavBar/>
        <AboutProject/>
        <HowWeWork/>
+       <div className="w-[1200px] h-full mx-auto my-20" >
+
        <CarouselComponent images={images}/>
+       </div>
         {/* <Scroll images={images}/> */}
     
       
